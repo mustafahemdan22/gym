@@ -314,6 +314,17 @@
   .bookBtn {
     display: none;
   }
+
+  .themeToggleBtn {
+    position: absolute;
+    left: 1rem;
+    margin: 0;
+  }
+
+  [dir="rtl"] .themeToggleBtn {
+    left: auto;
+    right: 1rem;
+  }
 }
 
 @media (max-width: 480px) {

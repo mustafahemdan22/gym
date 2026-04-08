@@ -104,11 +104,12 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
                 </li>
               ))}
             </ul>
+            
 
             <div className={styles.actions}>
               <button
                 onClick={toggleTheme}
-                className={styles.iconButton}
+                className={`${styles.iconButton} ${styles.themeToggleBtn}`}
                 aria-label="Toggle content mode"
                 title={isAr ? 'تبديل الفئة' : 'Switch Category'}
               >
