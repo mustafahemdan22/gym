@@ -250,7 +250,20 @@
   .benefitsGrid { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 768px) {
+  .programDetail { padding-top: 6rem; }
+  .ctaSection { padding: 3rem 1.5rem; border-radius: 20px; }
+  .btnGroup { flex-direction: column; gap: 1rem; }
+  .btnPrimary, .btnSecondary { width: 100%; padding: 1rem; }
+  .overviewSection { margin-bottom: 4rem; }
+  .sectionTitle { font-size: 1.8rem; margin-bottom: 2rem; }
+}
+
 @media (max-width: 600px) {
-  .metaGrid { grid-template-columns: 1fr; }
-  .ctaTitle { font-size: 2.2rem; }
+  .metaGrid { grid-template-columns: 1fr; gap: 1rem; }
+  .ctaTitle { font-size: 2rem; }
+  .title { font-size: 2.2rem; }
+  .desc { font-size: 1.1rem; }
+  .benefitCard { padding: 1.5rem; }
+  .ctaDesc { margin-bottom: 2rem; }
 }

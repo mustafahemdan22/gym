@@ -175,5 +175,12 @@
 
 @media (max-width: 768px) {
   .header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-  .grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; gap: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .blog { padding: 5rem 1.5rem; }
+  .title { font-size: 2.2rem; }
+  .imageWrap { height: 200px; }
+  .content { padding: 1.5rem; }
 }

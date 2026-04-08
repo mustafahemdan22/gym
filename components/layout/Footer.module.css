@@ -162,3 +162,19 @@
     text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 5rem 0 3rem;
+  }
+  .brandDesc {
+    max-width: 100%;
+  }
+  .socials {
+    justify-content: center;
+  }
+  .brand {
+    align-items: center;
+    text-align: center;
+  }
+}

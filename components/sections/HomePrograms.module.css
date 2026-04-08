@@ -173,8 +173,9 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 0.85rem;
-  border-radius: 0;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 20px;
+
 }
 
 .cardBtn:hover {
@@ -186,11 +187,28 @@
 
 @media (max-width: 768px) {
   .programs {
-    padding: 5rem 1.5rem;
+    padding: 6rem 1.5rem 5rem;
   }
 
   .grid {
     grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .programs {
+    padding-bottom: 4rem;
+  }
+  
+  .cardImage {
+    height: 180px;
   }
 }
 

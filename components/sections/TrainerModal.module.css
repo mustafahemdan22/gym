@@ -172,7 +172,15 @@
 
 @media (max-width: 768px) {
   .modal { grid-template-columns: 1fr; }
-  .imageWrap { height: 300px; }
+  .imageWrap { height: 350px; }
   .content { padding: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .imageWrap { height: 250px; }
+  .content { padding: 1.5rem; }
   .name { font-size: 2rem; }
+  .stats { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  .actions { flex-direction: column; gap: 0.8rem; }
+  .btnPrimary, .btnSecondary { width: 100%; padding: 0.8rem; }
 }

@@ -46,7 +46,15 @@
   text-align: right;
 }
 
-@media (max-width: 600px) {
-  .legal { padding-top: 8rem; }
-  .container h1 { font-size: 2.2rem; }
+@media (max-width: 768px) {
+  .legal {
+    padding: 6rem 1.5rem 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container h1 { font-size: 2rem; }
+  .lastUpdated { margin-bottom: 2rem; }
+  .content section h2 { font-size: 1.3rem; }
+  .content section p { font-size: 1rem; }
 }

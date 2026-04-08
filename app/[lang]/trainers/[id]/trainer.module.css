@@ -176,6 +176,8 @@
   display: flex;
   gap: 1.5rem;
   margin-top: 1rem;
+    border-radius: 20px;
+
 }
 
 .btnPrimary, .btnSecondary {
@@ -183,13 +185,14 @@
   align-items: center;
   justify-content: center;
   padding: 1.2rem 2.5rem;
-  border-radius: 50px;
+  border-radius: 20px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.95rem;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   cursor: pointer;
+  
 }
 
 .btnPrimary {
@@ -245,7 +248,22 @@
   .grid { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 768px) {
+  .trainerDetail { padding-top: 6rem; }
+  .btnGroup { flex-direction: column; }
+  .btnPrimary, .btnSecondary, .btn { width: 100%; padding: 1rem; }
+  .bioSection { margin-bottom: 4rem; }
+  .booking { margin-bottom: 4rem; padding: 3rem 1.5rem; }
+}
+
 @media (max-width: 600px) {
   .stats { gap: 1.5rem; flex-wrap: wrap; }
   .booking { padding: 2.5rem 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .name { font-size: 2.5rem; }
+  .role { font-size: 1.2rem; }
+  .bookTitle { font-size: 2rem; }
+  .imageWrap { aspect-ratio: auto; height: 350px; }
 }

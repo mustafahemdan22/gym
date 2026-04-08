@@ -82,7 +82,7 @@
 
 .filterBtn {
   padding: 0.7rem 1.8rem;
-  border-radius: 4px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-muted);
   font-weight: 700;
@@ -105,7 +105,7 @@
   background: var(--primary);
   color: #000;
   border-color: var(--primary);
-  border-radius: 4px;
+  border-radius: 20px;
   border: 1px solid var(--primary);
   font-weight: 800;
   font-size: 0.8rem;
@@ -266,5 +266,47 @@
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .programsHero {
+    padding: 6rem 1.5rem 5rem;
+    min-height: auto;
+  }
+  
+  .container {
+    margin-top: 2rem;
+  }
+  
+  .header {
+    margin-bottom: 3rem;
+  }
+  
+  .filters {
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .filterBtn, .filterBtnActive {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .programs {
+    padding-bottom: 5rem;
+  }
+  
+  .cardImage {
+    height: 200px;
+  }
+  
+  .cardBody {
+    padding: 1.2rem;
+  }
+  
+  .title {
+    font-size: 2.2rem;
   }
 }

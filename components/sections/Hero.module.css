@@ -104,7 +104,9 @@
   font-size: 1rem;
   letter-spacing: 3px;
   transition: all 0.4s ease;
+  border-radius: 20px;
 }
+
 
 .primaryBtn:hover {
   transform: scale(1.1);
@@ -179,18 +181,20 @@
 /* ========================= */
 /* Responsive */
 /* ========================= */
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .heroTitle {
     font-size: clamp(2rem, 10vw, 3.5rem);
   }
 
   .heroSubtitle {
     font-size: 1rem;
+    padding: 0 1rem;
   }
 
   .heroActions {
     flex-direction: column;
     align-items: center;
+    padding: 0 1.5rem;
   }
 
   .primaryBtn {
@@ -198,4 +202,10 @@
     max-width: 280px;
     text-align: center;
   }
+}
+
+@media (max-width: 480px) {
+  .heroTitle { font-size: 2.8rem; }
+  .heroSubtitle { margin-bottom: 1.5rem; }
+  .primaryBtn { max-width: 100%; padding: 1rem 2rem; }
 }

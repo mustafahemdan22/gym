@@ -242,16 +242,33 @@
 }
 
 @media (max-width: 768px) {
+  .aboutHero {
+    padding: 6rem 1.5rem 5rem;
+    min-height: auto;
+  }
+  .container {
+    margin-top: 2rem;
+  }
   .mission {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-
   .valuesGrid {
     grid-template-columns: 1fr;
   }
-
   .missionImage {
-    height: 280px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerTitle {
+    font-size: 2.2rem;
+  }
+  .missionImage {
+    height: 220px;
+  }
+  .valueCard {
+    padding: 1.5rem 1rem;
   }
 }

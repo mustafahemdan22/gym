@@ -168,5 +168,20 @@
   .grid {
     grid-template-columns: 1fr;
     max-width: 380px;
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrap {
+    height: 280px;
+  }
+  
+  .trainerInfo {
+    padding: 1rem;
   }
 }

@@ -134,9 +134,22 @@
   gap: 0.8rem;
 }
 
+@media (max-width: 768px) {
+  .blogDetail { padding-top: 6rem; }
+  .imageWrap { margin-bottom: 2rem; }
+  .footer { margin-top: 4rem; padding-top: 2rem; }
+}
+
 @media (max-width: 600px) {
   .meta { flex-direction: column; gap: 1rem; align-items: center; }
   .title { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .title { font-size: 2.2rem; }
+  .content h2 { font-size: 1.6rem; }
+  .meta { gap: 0.5rem; }
+  .imageWrap { aspect-ratio: auto; height: 220px; }
 }
 
 .loadingWrap {
