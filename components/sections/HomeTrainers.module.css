@@ -78,12 +78,10 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.01) 90%,
-    transparent 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.01) 90%,
+      transparent 100%);
   display: flex;
   align-items: flex-end;
   padding: 1.5rem;
@@ -105,6 +103,7 @@
   padding: 1.5rem;
   text-align: center;
 }
+
 .loadingWrap {
   display: flex;
   justify-content: center;
@@ -121,6 +120,7 @@
   text-transform: uppercase;
   font-weight: 800;
 }
+
 .trainerName {
   font-size: 1.3rem;
   color: var(--text-main);

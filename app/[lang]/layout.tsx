@@ -6,7 +6,7 @@ import Footer from '@/components/layout/Footer';
 
 interface LangLayoutProps {
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }
 
 export default async function LocaleLayout({

@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
-import { IoLanguage } from 'react-icons/io5';
 import { useTheme } from '@/context/ThemeContext';
 import styles from './Navbar.module.css';
 
