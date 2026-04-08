@@ -1,0 +1,52 @@
+.legal {
+  min-height: 100vh;
+  padding: 10rem 2rem 6rem;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.lastUpdated {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.content section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.content section p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+[dir="rtl"] .content section p {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .legal { padding-top: 8rem; }
+  .container h1 { font-size: 2.2rem; }
+}

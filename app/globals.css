@@ -1,26 +1,242 @@
-@import "tailwindcss";
+/* =========================
+   🔵 DARK THEME (Male)
+========================= */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors */
+  --primary: #00e5ff;
+  --secondary: #00b8d9;
+  --accent: #00ffc6;
+  --highlight: #7cffcb;
+  
+
+  /* Backgrounds */
+  --bg-main: var(--bg-gradient);
+  --bg-main-rgb: 5, 5, 5;
+  --bg-card: #0d0d10;
+  --bg-card-rgb: 13, 13, 16;
+
+  /* Text */
+  --text-main: var(--primary);
+  --text-muted: #9ca3af;
+
+  /* Borders & Effects */
+  --border: rgba(255, 255, 255, 0.08);
+  --selection: rgba(0, 229, 255, 0.25);
+  --bg-gradient: linear-gradient(90deg,
+      #0a737c,
+      #020f10,
+      #0a737c);
+
+  /* 🎨 Gradients */
+  --hero-gradient: linear-gradient(90deg,
+      var(--primary),
+      var(--highlight),
+      var(--primary));
+
+  --btn-gradient: linear-gradient(90deg,
+      var(--primary),
+      var(--accent));
+
+  /* Transition */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+/* =========================
+   🌸 LIGHT THEME (Female)
+========================= */
+
+[data-theme='light'] {
+  /* Brand Colors */
+  --primary: #eccdd0;
+  --secondary: #fecfef;
+  --accent: #fecfef;
+  --highlight: #fecfef;
+   --bg-gradient: linear-gradient(90deg,
+    #3e0505,
+      #a72845,
+      #3e0505);
+
+
+  /* Backgrounds */
+  --bg-main: var(--bg-gradient);
+  --bg-main-rgb: 255, 245, 250;
+  --bg-card: var(--bg-gradient);
+  --bg-card-rgb: 255, 255, 255;
+  
+
+  /* Text */
+  --text-main: var(--primary);
+  --text-muted: var(--primary);
+
+  /* Borders & Effects */
+  --border: rgba(0, 0, 0, 0.08);
+  --selection: rgba(255, 77, 166, 0.2);
+
+  /* 🎨 Gradients */
+  --hero-gradient: linear-gradient(90deg,
+      var(--primary),
+      var(--accent),
+      var(--primary));
+
+  --btn-gradient: linear-gradient(90deg,
+      var(--primary),
+      var(--secondary));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+/* =========================
+   🌍 GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+  transition: var(--transition);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================
+   ✨ TEXT SELECTION
+========================= */
+
+::selection {
+  background: var(--selection);
+  color: var(--text-main);
+}
+
+
+/* =========================
+   🔥 HERO TITLE
+========================= */
+
+.heroTitle {
+  background: var(--hero-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* ✨ optional animation */
+  background-size: 200% auto;
+  animation: shine 4s linear infinite;
+}
+
+
+/* =========================
+   🔘 BUTTON EXAMPLE
+========================= */
+
+.btnPrimary {
+  background: var(--btn-gradient);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+
+
+/* =========================
+   🎬 ANIMATION
+========================= */
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-oswald), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p,
+span,
+div,
+a,
+li,
+input,
+textarea,
+button {
+  font-family: var(--font-roboto-slab), serif;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: var(--bt);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* ::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 10px;
+} */
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+::selection {
+  background: var(--selection);
+  color: var(--highlight);
+}
+
+/* RTL Support utility */
+[dir='rtl'] {
+  text-align: right;
+}
+
+/* Animations Helpers */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

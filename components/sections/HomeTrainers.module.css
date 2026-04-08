@@ -1,0 +1,172 @@
+.trainers {
+  padding: 10rem 2rem;
+  background: #000;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--text-main);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.trainerCard {
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg-gradient);
+  border: 1px solid var(--border);
+  transition: all 0.4s ease;
+}
+
+.trainerCard:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.imageWrap {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.trainerCard:hover .image {
+  transform: scale(1.1);
+}
+
+.trainerBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary);
+  color: #000;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.01) 90%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.trainerCard:hover .overlay {
+  opacity: 1;
+}
+
+.overlayBio {
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.trainerInfo {
+  padding: 1.5rem;
+  text-align: center;
+}
+.loadingWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+}
+
+.loadingText {
+  font-family: var(--font-oswald);
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.trainerName {
+  font-size: 1.3rem;
+  color: var(--text-main);
+  margin-bottom: 0.3rem;
+}
+
+.trainerRole {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.btnQuickView {
+  width: 100%;
+  padding: 0.8rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trainerCard:hover .btnQuickView {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .trainers {
+    padding: 5rem 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+  }
+}

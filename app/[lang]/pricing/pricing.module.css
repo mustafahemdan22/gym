@@ -1,0 +1,250 @@
+.pricing {
+  padding-bottom: 8rem;
+  background: var(--bg-main);
+}
+
+.pricingHero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 10rem;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  filter: grayscale(100%) contrast(110%);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 0%, #000 90%),
+              linear-gradient(to bottom, transparent 60%, black 100%);
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 6rem auto 0;
+  position: relative;
+  z-index: 2;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.card {
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.cardPopular {
+ 
+  border-color: var(--primary);
+  background: linear-gradient(145deg, var(--bg-card) 0%, rgba(0, 247, 255, 0.03) 100%);
+}
+
+[data-theme='light'] .cardPopular {
+  background: linear-gradient(145deg, var(--bg-card) 0%, rgba(255, 0, 131, 0.03) 100%);
+}
+
+.popularBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: var(--primary);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+[dir='rtl'] .popularBadge {
+  right: auto;
+  left: 1.5rem;
+}
+
+.planName {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  margin-bottom: 2rem;
+}
+
+.amount {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.period {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem;
+  flex-grow: 1;
+}
+
+.featureItem {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.featureItem p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.check {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.btn, .btnPopular {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.btnPopular {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  color: #000;
+  box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.3);
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-5px);
+}
+
+.btnPopular:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.15);
+}
+
+[data-theme='light'] .btn:hover {
+  box-shadow: 0 0 20px rgba(255, 0, 131, 0.3);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.loadingWrap {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-main);
+}
+
+.loadingText {
+  font-family: var(--font-oswald);
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 700;
+}
