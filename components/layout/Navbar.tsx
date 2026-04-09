@@ -20,26 +20,15 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
-  // resize and scroll effects
+  // scroll effect
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 150);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
@@ -73,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
     <header className={styles.navbar}>
       {/* Top Bar */}
       <AnimatePresence>
-        {(!isScrolled || isMobile) && (
+        {!isScrolled && (
           <motion.div
             className={styles.topBar}
             initial={{ height: 0, opacity: 0 }}

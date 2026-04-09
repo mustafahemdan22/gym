@@ -48,7 +48,7 @@
   color: white;
   font-size: 1rem;
   transition: transform 0.2s;
-  
+
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -57,9 +57,7 @@
   }
 }
 
-.nav {
-  padding: 1rem 0;
-}
+
 
 .container {
   max-width: 1200px;
@@ -284,7 +282,7 @@
   background-color: currentColor;
   left: 0;
   transition: all 0.3s ease;
-  
+
 }
 
 .hamburger::before {
@@ -347,34 +345,46 @@
 
 @media (max-width: 768px) {
   .navbar {
-    position: fixed;
     top: auto;
+    position: fixed !important;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 9999;
     border-bottom: none;
+    padding: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     background: var(--bg-gradient);
     backdrop-filter: blur(15px);
   }
+  
 
   .socialLink {
     display: none;
   }
-
   .topBar {
-    background: var(--bg-gradient);
-    position: fixed;
-    bottom: auto;
-    top: 0;
+    position: absolute !important;
+    top: 0 !important;
     left: 0;
     right: 0;
-    z-index: 10000;
-    color: white;
-    font-size: 0.9rem;
-    padding: 0;
+    z-index: 10001;
+    background: var(--bg-gradient) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    align-items: center;
   }
+
+  .topBarScrolled {
+     position: fixed !important;
+     display: flex !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: var(--bg-gradient);
+  backdrop-filter: blur(10px);
+}
+
   .topBarContent {
     padding-top: 0.4rem;
   }
@@ -395,33 +405,35 @@
 
   .navContent {
     align-items: center;
-    
+
   }
-.mobileMenu {
-  position: absolute;
-  width: 30%;
-  bottom: 100%;
-  background: var(--bg-main);
-  text-align: center;
-}
 
-/* English: left-aligned */
-[dir="ltr"] .mobileMenu {
-   right: 0;
-  left: auto;
-  border-radius: 30px 0 0 0;
+  .mobileMenu {
+    position: absolute;
+    width: 30%;
+    bottom: 100%;
+    background: var(--bg-main);
+    text-align: center;
+  }
 
-  
+  /* English: left-aligned */
+  [dir="ltr"] .mobileMenu {
+    right: 0;
+    left: auto;
+    border-radius: 30px 0 0 0;
 
-}
 
-/* Arabic: right-aligned */
-[dir="rtl"] .mobileMenu {
-  left: 0;
-  right: auto;
 
-  border-radius: 0 30px 0 0; /* الزوايا الأصلية */
-}
+  }
+
+  /* Arabic: right-aligned */
+  [dir="rtl"] .mobileMenu {
+    left: 0;
+    right: auto;
+
+    border-radius: 0 30px 0 0;
+    /* الزوايا الأصلية */
+  }
 }
 
 @media (max-width: 480px) {
