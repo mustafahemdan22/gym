@@ -88,7 +88,7 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
         animate="visible"
       >
         <motion.h1
-          className={styles.heroTitle}
+          className={`${styles.heroTitle} ${isAr ? styles.heroTitleAr : ''}`}
           animate="visible"
           initial="hidden"
           variants={{
@@ -103,15 +103,48 @@ const Hero: React.FC<HeroProps> = ({ lang }) => {
             },
           }}
         >
-          {Array.from(isAr ? content.title.ar : content.title.en).map((char, index) => (
-            <motion.span
-              key={index}
-              variants={charVariants}
-              style={{ display: 'inline-block', whiteSpace: char === ' ' ? 'pre' : 'normal' }}
-            >
-              {char}
-            </motion.span>
-          ))}
+          {isAr ? (
+            content.title.ar.split(' ').map((word, wordIndex, array) => (
+              <span key={wordIndex} style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+                <motion.span
+                  variants={charVariants}
+                  style={{ display: 'inline-block' }}
+                >
+                  {word}
+                </motion.span>
+                {wordIndex < array.length - 1 && (
+                  <motion.span
+                    variants={charVariants}
+                    style={{ display: 'inline-block', whiteSpace: 'pre' }}
+                  >
+                    {' '}
+                  </motion.span>
+                )}
+              </span>
+            ))
+          ) : (
+            content.title.en.split(' ').map((word, wordIndex, array) => (
+              <span key={wordIndex} style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+                {Array.from(word).map((char, charIndex) => (
+                  <motion.span
+                    key={charIndex}
+                    variants={charVariants}
+                    style={{ display: 'inline-block' }}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+                {wordIndex < array.length - 1 && (
+                  <motion.span
+                    variants={charVariants}
+                    style={{ display: 'inline-block', whiteSpace: 'pre' }}
+                  >
+                    {' '}
+                  </motion.span>
+                )}
+              </span>
+            ))
+          )}
         </motion.h1>
 
         <motion.p className={styles.heroSubtitle} variants={fadeUp}>
