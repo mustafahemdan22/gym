@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { IoCalendarOutline, IoTimeOutline, IoPersonOutline, IoFitnessOutline, IoCheckmarkCircleOutline } from 'react-icons/io5';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useGymData } from '@/hooks/useGymData';
+import { useMutation } from 'convex/react';
+import { api } from '@/convex/_generated/api';
 import styles from './schedule.module.css';
 
 export default function SchedulePage({ params }: { params: Promise<{ lang: string }> }) {
@@ -19,6 +21,8 @@ export default function SchedulePage({ params }: { params: Promise<{ lang: strin
   const [selectedTrainer, setSelectedTrainer] = useState(searchParams.get('trainerId') || '');
   const [selectedProgram, setSelectedProgram] = useState(searchParams.get('programId') || '');
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const createBooking = useMutation(api.booking.createBooking);
 
   if (isLoading) {
     return (
@@ -54,13 +58,27 @@ export default function SchedulePage({ params }: { params: Promise<{ lang: strin
     { id: '20:00', label: '08:00 PM' },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!date || !time) return alert(isAr ? 'برجاء اختيار التاريخ والوقت' : 'Please select date and time');
     
-    // Simulate API call
-    console.log('Booking submitted:', { date, time, selectedTrainer, selectedProgram, ...formData });
-    router.push(`/${lang}/schedule/success`);
+    setStatus('loading');
+    try {
+      await createBooking({
+        date,
+        time,
+        trainerId: selectedTrainer || undefined,
+        programId: selectedProgram || undefined,
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+      });
+      setStatus('success');
+      router.push(`/${lang}/schedule/success`);
+    } catch (error) {
+      console.error("Failed to submit booking", error);
+      setStatus('error');
+    }
   };
 
   const trainer = trainers.find(t => t.id === selectedTrainer);
@@ -163,9 +181,14 @@ export default function SchedulePage({ params }: { params: Promise<{ lang: strin
                 </select>
               </div>
 
-              <button type="submit" className={styles.btnSubmit}>
-                {isAr ? 'تأكيد الحجز' : 'CONFIRM BOOKING'}
+              <button type="submit" className={styles.btnSubmit} disabled={status === 'loading'}>
+                {status === 'loading' ? (isAr ? 'جاري التأكيد...' : 'CONFIRMING...') : (isAr ? 'تأكيد الحجز' : 'CONFIRM BOOKING')}
               </button>
+              {status === 'error' && (
+                <div style={{ color: 'red', marginTop: '1rem', textAlign: 'center', fontSize: '0.9rem' }}>
+                  {isAr ? 'حدث خطأ. يرجى المحاولة مرة أخرى.' : 'An error occurred. Please try again.'}
+                </div>
+              )}
             </form>
           </motion.div>
 

@@ -22,8 +22,8 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'GymHub - Elevate Your Strength',
-  description: 'Pro-grade fitness and training for elite athletes and gym rats.',
+  title: 'GymHub Alexandria - Elevate Your Strength',
+  description: 'Pro-grade fitness and training for elite athletes right here in Alexandria, Egypt.',
 };
 
 export default function RootLayout({

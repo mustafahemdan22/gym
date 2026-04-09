@@ -104,4 +104,21 @@ export default defineSchema({
     }),
     mode: v.union(v.literal("male"), v.literal("female")),
   }).index("by_mode", ["mode"]),
+
+  contactMessages: defineTable({
+    name: v.string(),
+    email: v.string(),
+    message: v.string(),
+    createdAt: v.number(),
+  }),
+  bookings: defineTable({
+    name: v.string(),
+    email: v.string(),
+    phone: v.string(),
+    date: v.string(),
+    time: v.string(),
+    trainerId: v.optional(v.string()),
+    programId: v.optional(v.string()),
+    createdAt: v.number(),
+  }),
 });

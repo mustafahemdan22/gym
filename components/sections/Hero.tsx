@@ -23,7 +23,7 @@ const heroContent = {
     cta2: { en: 'VIEW PROGRAMS', ar: 'عرض البرامج' },
   },
   female: {
-    title: { en: 'GLOW WITH FITNESS', ar: 'تألّقي بلياقة' },
+    title: { en: 'GLOWING WITH FITNESS', ar: 'تألّقي بلياقة' },
     subtitle: {
       en: 'Move with confidence. Discover your power.',
       ar: 'تحرّكي بثقة واكتشفي قوتك.',
@@ -66,9 +66,7 @@ const charVariants = {
 const Hero: React.FC<HeroProps> = ({ lang }) => {
   const { contentMode } = useTheme();
   const isAr = lang === 'ar';
-
   const content = heroContent[contentMode];
-
   const heroImagePath = getHeroImage(contentMode);
   const heroImageUrl = getCloudinaryUrl(heroImagePath, {
     width: 1920,

@@ -24,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
   // scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 150);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -107,17 +107,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
             
 
             <div className={styles.actions}>
-              <button
-                onClick={toggleTheme}
-                className={`${styles.iconButton} ${styles.themeToggleBtn}`}
-                aria-label="Toggle content mode"
-                title={isAr ? 'تبديل الفئة' : 'Switch Category'}
-              >
-                <span className={styles.langText}>
-                  {contentMode === 'male' ? (isAr ? 'عالم الرجال' : 'MEN') : (isAr ? 'عالم السيدات' : 'WOMEN')}
-                </span>
-              </button>
-
+             
               <button 
                 onClick={switchLanguage} 
                 className={styles.iconButton} 
@@ -130,6 +120,17 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
               <Link href={`/${lang}/schedule`} className={styles.bookBtn}>
                 {isAr ? 'احجز الآن' : 'BOOK NOW'}
               </Link>
+               <button
+                onClick={toggleTheme}
+                className={`${styles.iconButton} ${styles.themeToggleBtn}`}
+                aria-label="Toggle content mode"
+                title={isAr ? 'تبديل الفئة' : 'Switch Category'}
+              >
+                <span className={styles.langText}>
+                  {contentMode === 'male' ? (isAr ? 'الرجال' : 'MEN') : (isAr ? 'السيدات' : 'WOMEN')}
+                </span>
+              </button>
+
 
               <button className={styles.menuButton} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
                 <div className={styles.hamburger} />

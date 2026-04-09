@@ -5,10 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { IoClose, IoStar, IoTrophy, IoFitness, IoArrowForward } from 'react-icons/io5';
 import Link from 'next/link';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
+import type { Trainer } from '@/types/gym';
 import styles from './TrainerModal.module.css';
 
 interface TrainerModalProps {
-  trainer: any;
+  trainer: Trainer | null;
   isOpen: boolean;
   onClose: () => void;
   lang: string;

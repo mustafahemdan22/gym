@@ -5,8 +5,8 @@ export const malePrograms: Program[] = [
     id: "prog_01",
     title: { en: "The Titan Build", ar: "بناء العملاق" },
     description: {
-      en: "Maximum hypertrophy and strength gains through progressive overload. Built for serious lifters who want to push past their limits.",
-      ar: "أقصى قدر من تضخم العضلات ومكاسب القوة من خلال التحميل التدريجي. مصمم للرافعين الجادين الذين يريدون تجاوز حدودهم."
+      en: "Hypertrophy gains through progressive overload. Built for serious lifters who want to push past their limits.",
+      ar: "تضخم العضلات ومكاسب القوة من خلال التحميل التدريجي. مصمم للرافعين الجادين الذين يريدون تجاوز حدودهم."
     },
     image: "GymHub/programs/strength/program_strength_01",
     duration: "12 Weeks",
@@ -73,7 +73,7 @@ export const malePrograms: Program[] = [
     en: "A hypertrophy-focused training plan designed to increase muscle size using progressive overload and structured splits.",
     ar: "برنامج يركز على التضخيم العضلي باستخدام الحمل التدريجي وتقسيم التمارين بشكل منظم."
   },
-  image: "GymHub/programs/strength/program_strength_04",
+  image: "GymHub/programs/strength/program_strength_01",
   duration: "12 Weeks",
   intensity: "High",
   category: "muscle-gain",

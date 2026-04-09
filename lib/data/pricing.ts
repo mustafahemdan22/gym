@@ -12,7 +12,7 @@ export const pricingPlans = {
     {
       id: 'm1',
       name: { en: 'Basic Warrior', ar: 'المحارب الأساسي' },
-      price: '$29',
+      price: '1,450 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'Access to Gym Floor', ar: 'دخول إلى صالة الجيم' },
@@ -23,7 +23,7 @@ export const pricingPlans = {
     {
       id: 'm2',
       name: { en: 'Elite Champion', ar: 'البطل النخبوي' },
-      price: '$59',
+      price: '2,950 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'All Basic Features', ar: 'جميع الميزات الأساسية' },
@@ -36,7 +36,7 @@ export const pricingPlans = {
     {
       id: 'm3',
       name: { en: 'Titan Status', ar: 'مرتبة تيتان' },
-      price: '$99',
+      price: '4,950 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'All Elite Features', ar: 'جميع الميزات النخبوية' },
@@ -50,7 +50,7 @@ export const pricingPlans = {
     {
       id: 'f1',
       name: { en: 'Glow Basic', ar: 'توهج أساسي' },
-      price: '$25',
+      price: '1,250 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'Gym & Cardio Area', ar: 'منطقة الجيم والكارديو' },
@@ -61,7 +61,7 @@ export const pricingPlans = {
     {
       id: 'f2',
       name: { en: 'Radiant Plus', ar: 'إشراق بلس' },
-      price: '$49',
+      price: '2,450 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'All Basic Features', ar: 'جميع الميزات الأساسية' },
@@ -73,7 +73,7 @@ export const pricingPlans = {
     {
       id: 'f3',
       name: { en: 'Empower Elite', ar: 'نخبة التمكين' },
-      price: '$89',
+      price: '4,450 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'All Radiant Features', ar: 'جميع ميزات الإشراق' },

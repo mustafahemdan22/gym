@@ -9,6 +9,8 @@
  */
 
 import type * as blog from "../blog.js";
+import type * as booking from "../booking.js";
+import type * as contact from "../contact.js";
 import type * as faq from "../faq.js";
 import type * as pricing from "../pricing.js";
 import type * as programs from "../programs.js";
@@ -23,6 +25,8 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   blog: typeof blog;
+  booking: typeof booking;
+  contact: typeof contact;
   faq: typeof faq;
   pricing: typeof pricing;
   programs: typeof programs;

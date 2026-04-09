@@ -16,8 +16,8 @@ const aboutContent = {
     tag: { en: 'ABOUT GYMHUB', ar: 'عن جيم هب' },
     title: { en: 'FORGED IN STEEL', ar: 'مصاغ من الفولاذ' },
     desc: {
-      en: 'GymHub is more than a gym — it\'s a battleground for those who refuse to settle. Our state-of-the-art facility, world-class coaches, and proven programs are designed to transform raw potential into elite performance.',
-      ar: 'جيم هب أكثر من مجرد صالة رياضية — إنها ساحة معركة لمن يرفضون القبول بالأقل. مرافقنا المتطورة ومدربونا العالميون وبرامجنا المُثبتة مصممة لتحويل الإمكانات الخام إلى أداء نخبوي.',
+      en: 'GymHub is more than a gym — it\'s Alexandria\'s premier battleground for those who refuse to settle. Our state-of-the-art facility in Smouha, world-class coaches, and proven programs are designed to transform raw potential into elite performance.',
+      ar: 'جيم هب أكثر من مجرد صالة رياضية — إنها ساحة الإسكندرية الأولى للمعركة لمن يرفضون القبول بالأقل. مرافقنا المتطورة في سموحة، ومدربونا العالميون وبرامجنا المُثبتة مصممة لتحويل الإمكانات الخام إلى أداء نخبوي.',
     },
     stats: [
       { icon: IoFitness, value: '150+', label: { en: 'Equipment Units', ar: 'وحدة معدات' } },
@@ -30,8 +30,8 @@ const aboutContent = {
     tag: { en: 'ABOUT GYMHUB', ar: 'عن جيم هب' },
     title: { en: 'BUILT FOR BRILLIANCE', ar: 'مصمّم للتألّق' },
     desc: {
-      en: 'GymHub is your sanctuary for transformation. Our welcoming space, expert wellness coaches, and holistic programs are crafted to help you shine from the inside out — at your pace, on your terms.',
-      ar: 'جيم هب هو ملاذك للتحوّل. مساحتنا الترحيبية ومدربات العافية الخبيرات وبرامجنا الشاملة مصمّمة لمساعدتك على التألّق من الداخل إلى الخارج — بوتيرتك ووفق شروطك.',
+      en: 'GymHub is your sanctuary for transformation in the heart of Alexandria. Our welcoming space, expert wellness coaches, and holistic programs are crafted to help you shine from the inside out — at your pace, on your terms.',
+      ar: 'جيم هب هو ملاذك للتحوّل في قلب الإسكندرية. مساحتنا الترحيبية ومدربات العافية الخبيرات وبرامجنا الشاملة مصمّمة لمساعدتك على التألّق من الداخل إلى الخارج — بوتيرتك ووفق شروطك.',
     },
     stats: [
       { icon: IoFitness, value: '80+', label: { en: 'Class Types', ar: 'نوع صف' } },

@@ -6,6 +6,7 @@ import { IoStar } from 'react-icons/io5';
 import { useGymData } from '@/hooks/useGymData';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
 import TrainerModal from '@/components/sections/TrainerModal';
+import type { Trainer } from '@/types/gym';
 import styles from './HomeTrainers.module.css';
 
 interface HomeTrainersProps {
@@ -16,10 +17,10 @@ const HomeTrainers: React.FC<HomeTrainersProps> = ({ lang }) => {
   const { trainers, contentMode, isLoading } = useGymData();
   const isAr = lang === 'ar';
   
-  const [selectedTrainer, setSelectedTrainer] = React.useState<any>(null);
+  const [selectedTrainer, setSelectedTrainer] = React.useState<Trainer | null>(null);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
-  const openModal = (trainer: any) => {
+  const openModal = (trainer: Trainer) => {
     setSelectedTrainer(trainer);
     setIsModalOpen(true);
   };

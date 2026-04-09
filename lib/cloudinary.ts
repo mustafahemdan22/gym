@@ -23,9 +23,7 @@ export function getCloudinaryUrl(path: string, options: CloudinaryOptions = {}):
   if (path.startsWith('http')) {
     return path;
   }
-
-  const isLocal = process.env.NEXT_PUBLIC_USE_LOCAL_ASSETS === 'true' || process.env.NODE_ENV === 'development';
-
+  const isLocal = process.env.NEXT_PUBLIC_USE_LOCAL_ASSETS === 'true';
   if (isLocal) {
     // Local fallback: Use provided path, assuming they are in /public/
     // Hero, Blog, and About assets are usually .jpg, others are .png

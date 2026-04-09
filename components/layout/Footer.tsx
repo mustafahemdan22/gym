@@ -82,11 +82,11 @@ const Footer: React.FC<FooterProps> = ({ lang }) => {
               </li>
               <li>
                 <IoCall />
-                <span>+1 (555) 123-4567</span>
+                <span>+20 12 3456 7890</span>
               </li>
               <li>
                 <IoLocationSharp />
-                <span>{isAr ? 'شارع الرياضة 123، المدينة' : '123 Fitness Ave, City'}</span>
+                <span>{isAr ? 'سموحة، الإسكندرية، مصر' : 'Smouha, Alexandria, Egypt'}</span>
               </li>
             </ul>
           </div>

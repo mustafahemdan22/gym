@@ -1,8 +1,10 @@
 'use client';
 
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { motion } from 'framer-motion';
 import { IoMail, IoCall, IoLocation, IoTime } from 'react-icons/io5';
+import { useMutation } from 'convex/react';
+import { api } from '@/convex/_generated/api';
 import { useTheme } from '@/context/ThemeContext';
 import { getCloudinaryUrl, getHeroImage } from '@/lib/cloudinary';
 import styles from './contact.module.css';
@@ -10,7 +12,7 @@ import styles from './contact.module.css';
 export default function ContactPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = use(params);
   const { contentMode } = useTheme();
-  
+
   const heroImagePath = getHeroImage(contentMode);
   const heroImageUrl = getCloudinaryUrl(heroImagePath, {
     width: 1920,
@@ -19,18 +21,35 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
   });
   const isAr = lang === 'ar';
 
+  const sendMessage = useMutation(api.contact.sendMessage);
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+    try {
+      await sendMessage(formData);
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (error) {
+      console.error("Failed to send message", error);
+      setStatus('error');
+    }
+  };
+
+
   const headers = {
     male: {
       tag: { en: 'GET IN TOUCH', ar: 'تواصل معنا' },
       title: { en: 'JOIN THE RANKS', ar: 'انضم إلى الصفوف' },
       subtitle: { en: 'Have questions about memberships, elite coaching, or our facility? Reach out to us today.', ar: 'هل لديك أسئلة حول العضويات أو التدريب النخبوي أو مرافقنا؟ تواصل معنا اليوم.' },
-      hero: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1920&auto=format&fit=crop"
     },
     female: {
       tag: { en: 'CONNECT WITH US', ar: 'اتصلي بنا' },
       title: { en: 'SHINE TOGETHER', ar: 'لنتألق معاً' },
-      subtitle: { en: 'We are here to support your journey. Leave us a message and we will get back to you shortly.', ar: 'نحن هنا لدعم رحلتك. اتركي لنا رسالة وسنرد عليك قريباً.' },
-      hero: "https://images.unsplash.com/photo-1620188467120-09062088365a?q=80&w=1920&auto=format&fit=crop"
+      subtitle: { en: 'We are here to support your journey. Leave us a message and we will get back to you shortly.', ar: 'نحن هنا لدعم رحلتك. اتركي لنا رسالة وسنرد عليك قريباً.' }
     },
   };
 
@@ -38,8 +57,8 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
 
   const infoItems = [
     { icon: <IoMail />, title: { en: 'Email', ar: 'البريد الإلكتروني' }, value: 'info@gymhub.com' },
-    { icon: <IoCall />, title: { en: 'Phone', ar: 'الهاتف' }, value: '+1 (555) 123-4567' },
-    { icon: <IoLocation />, title: { en: 'Location', ar: 'الموقع' }, value: isAr ? 'شارع الرياضة 123، المدينة' : '123 Fitness Ave, City' },
+    { icon: <IoCall />, title: { en: 'Phone', ar: 'الهاتف' }, value: '+20 12 3456 7890' },
+    { icon: <IoLocation />, title: { en: 'Location', ar: 'الموقع' }, value: isAr ? 'سموحة، الإسكندرية، مصر' : 'Smouha, Alexandria, Egypt' },
     { icon: <IoTime />, title: { en: 'Hours', ar: 'ساعات العمل' }, value: isAr ? 'يومياً: 6:00 ص - 11:00 م' : 'Daily: 6:00 AM - 11:00 PM' },
   ];
 
@@ -50,8 +69,8 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
           <img src={heroImageUrl} alt="" className={styles.heroImage} />
           <div className={styles.heroOverlay} />
         </div>
-        
-        <motion.div 
+
+        <motion.div
           className={styles.header}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -66,7 +85,7 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
 
       <div className={styles.container}>
         <div className={styles.contentRow}>
-          <motion.div 
+          <motion.div
             className={styles.infoCol}
             initial={{ opacity: 0, x: isAr ? 40 : -40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -83,28 +102,38 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
             ))}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className={styles.formCol}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+            <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.inputGroup}>
                 <label>{isAr ? 'الاسم بالكامل' : 'Full Name'}</label>
-                <input type="text" placeholder={isAr ? 'ادخل اسمك' : 'Enter your name'} required />
+                <input type="text" placeholder={isAr ? 'ادخل اسمك' : 'Enter your name'} required value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} disabled={status === 'loading'} />
               </div>
               <div className={styles.inputGroup}>
                 <label>{isAr ? 'البريد الإلكتروني' : 'Email Address'}</label>
-                <input type="email" placeholder={isAr ? 'ادخل بريدك' : 'Enter your email'} required />
+                <input type="email" placeholder={isAr ? 'ادخل بريدك' : 'Enter your email'} required value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} disabled={status === 'loading'} />
               </div>
               <div className={styles.inputGroup}>
                 <label>{isAr ? 'الرسالة' : 'Message'}</label>
-                <textarea rows={5} placeholder={isAr ? 'كيف يمكننا مساعدتك؟' : 'How can we help you?'} required />
+                <textarea rows={5} placeholder={isAr ? 'كيف يمكننا مساعدتك؟' : 'How can we help you?'} required value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })} disabled={status === 'loading'} />
               </div>
-              <button className={styles.submitBtn}>
-                {isAr ? 'إرسال الرسالة' : 'SEND MESSAGE'}
+              <button type="submit" className={styles.submitBtn} disabled={status === 'loading'}>
+                {status === 'loading' ? (isAr ? 'جاري الإرسال...' : 'SENDING...') : (isAr ? 'إرسال الرسالة' : 'SEND MESSAGE')}
               </button>
+              {status === 'success' && (
+                <div style={{ color: 'var(--accent)', marginTop: '1rem', textAlign: 'center', fontSize: '0.9rem' }}>
+                  {isAr ? 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.' : 'Your message has been sent successfully! We will get back to you shortly.'}
+                </div>
+              )}
+              {status === 'error' && (
+                <div style={{ color: 'red', marginTop: '1rem', textAlign: 'center', fontSize: '0.9rem' }}>
+                  {isAr ? 'حدث خطأ. يرجى المحاولة مرة أخرى.' : 'An error occurred. Please try again.'}
+                </div>
+              )}
             </form>
           </motion.div>
         </div>

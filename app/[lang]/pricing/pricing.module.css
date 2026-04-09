@@ -17,6 +17,8 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+
 }
 
 .heroImage {
@@ -24,7 +26,6 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.5;
-  filter: grayscale(100%) contrast(110%);
 }
 
 .heroOverlay {

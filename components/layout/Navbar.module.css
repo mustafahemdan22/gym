@@ -18,12 +18,11 @@
 }
 
 .topBar {
-  background: rgba(var(--primary-rgb), 0.1);
   color: white;
   font-size: 0.9rem;
   padding: 0.3rem 0;
   backdrop-filter: blur(10px);
-}
+ }
 
 .topBarContent {
   display: flex;
@@ -132,18 +131,17 @@
 }
 
 .iconButton {
-  background: none;
+  background: transparent;
   border: none;
   cursor: pointer;
   color: white;
   font-size: 1.2rem;
-  margin-left: 30px;
 }
 
 .bookBtn {
   background: var(--primary);
   color: #000;
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 0.5rem;
   border-radius: 50px;
   font-weight: 700;
   text-decoration: none;
@@ -163,7 +161,7 @@
 .langText {
   font-weight: bold;
   text-transform: uppercase;
-  margin-left: 5px;
+  
 }
 
 .menuButton {
@@ -201,7 +199,7 @@
 /* Scroll Buttons Positions */
 .scrollToLeft {
   left: 2rem;
-  bottom: 2rem;
+  bottom: 3rem;
   position: fixed;
   z-index: 1000;
   background-color: var(--color-primary);
@@ -332,6 +330,9 @@
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+  }
+  .scrollToLeft {
+    display: none;
   }
 
   .discountBanner {

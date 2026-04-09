@@ -52,5 +52,31 @@ export const femalePrograms: Program[] = [
     intensity: "Medium",
     category: "fitness",
     sessions: 4
+  },
+  {
+    id: "prog_05",
+    title: { en: "HIIT Blaze", ar: "لهيب الهيت" },
+    description: {
+      en: "Incinerate calories and boost your metabolism with high-intensity intervals designed for maximum efficiency.",
+      ar: "احرق السعرات الحرارية وعزز عملية التمثيل الغذائي لديك من خلال فترات عالية الكثافة مصممة لتحقيق أقصى قدر من الكفاءة."
+    },
+    image: "GymHub/programs/cardio/program_cardio_02",
+    duration: "6 Weeks",
+    intensity: "High",
+    category: "cardio",
+    sessions: 5
+  },
+  {
+    id: "prog_06",
+    title: { en: "Strength Queen", ar: "ملكة القوة" },
+    description: {
+      en: "Build a powerful foundation. Focus on compound lifts to increase overall strength, tone, and functional fitness.",
+      ar: "ابني أساساً قوياً. ركزي على الرفعات المركبة لزيادة القوة الإجمالية، التناسك، واللياقة البدنية الوظيفية."
+    },
+    image: "GymHub/programs/cardio/program_cardio_03",
+    duration: "12 Weeks",
+    intensity: "High",
+    category: "strength",
+    sessions: 4
   }
 ];

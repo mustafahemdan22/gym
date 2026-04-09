@@ -3,7 +3,7 @@ import { Trainer } from '@/types/gym';
 export const femaleTrainers: Trainer[] = [
   {
     id: "trainer_01",
-    name: { en: "Sarah Ahmed", ar: "سارة أحمد" },
+    name: { en: "Sara Mohamed", ar: "سارة محمد" },
     role: { en: "Fitness Expert", ar: "خبيرة لياقة" },
     bio: {
       en: "Certified personal trainer focused on body sculpting, toning, and sustainable fitness habits.",
@@ -29,7 +29,7 @@ export const femaleTrainers: Trainer[] = [
   },
   {
     id: "trainer_03",
-    name: { en: "Mariam Al-Sayed", ar: "مريم السيد" },
+    name: { en: "Nourhan Ahmed", ar: "نورهان أحمد" },
     role: { en: "Cardio Specialist", ar: "متخصصة كارديو" },
     bio: {
       en: "HIIT and cardio dance expert with a passion for energizing group classes and fat-burning circuits.",
@@ -42,7 +42,7 @@ export const femaleTrainers: Trainer[] = [
   },
   {
     id: "trainer_04",
-    name: { en: "Nadia Hassan", ar: "ناديا حسن" },
+    name: { en: "Mariam Khaled", ar: "مريم خالد" },
     role: { en: "Pilates Master", ar: "خبيرة بيلاتس" },
     bio: {
       en: "Classical Pilates instructor specializing in core strengthening, posture correction, and rehabilitation.",
@@ -68,7 +68,7 @@ export const femaleTrainers: Trainer[] = [
   },
   {
     id: "trainer_06",
-    name: { en: "Hana Karim", ar: "هانا كريم" },
+    name: { en: "Nada Youssef", ar: "ندى يوسف" },
     role: { en: "Nutrition & Wellness", ar: "تغذية وعافية" },
     bio: {
       en: "Registered dietitian and wellness coach integrating nutrition science with movement therapy.",

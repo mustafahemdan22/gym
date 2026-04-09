@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { mutation } from "./_generated/server";
 
 const maleTrainers = [
@@ -16,7 +17,7 @@ const maleTrainers = [
   },
   {
     id: "trainer_02",
-    name: { en: "Marcus Thorne", ar: "ماركوس ثورن" },
+    name: { en: "Mahmoud Adel", ar: "محمود عادل" },
     role: { en: "Bodybuilding Pro", ar: "محترف كمال أجسام" },
     bio: {
       en: "IFBB Pro competitor and certified nutrition specialist with a focus on hypertrophy training.",
@@ -55,7 +56,7 @@ const maleTrainers = [
   },
   {
     id: "trainer_05",
-    name: { en: "Jason Rivera", ar: "جيسون ريفيرا" },
+    name: { en: "Kareem Tarek", ar: "كريم طارق" },
     role: { en: "Athletic Performance", ar: "أداء رياضي" },
     bio: {
       en: "Former D1 athlete now coaching explosive power and sport-specific conditioning.",
@@ -84,7 +85,7 @@ const maleTrainers = [
 const femaleTrainers = [
   {
     id: "trainer_01",
-    name: { en: "Sarah Jenkins", ar: "سارة جينكينز" },
+    name: { en: "Sara Mohamed", ar: "سارة محمد" },
     role: { en: "Fitness Expert", ar: "خبيرة لياقة" },
     bio: {
       en: "Certified personal trainer focused on body sculpting, toning, and sustainable fitness habits.",
@@ -110,7 +111,7 @@ const femaleTrainers = [
   },
   {
     id: "trainer_03",
-    name: { en: "Elena Rossi", ar: "إيلينا روسي" },
+    name: { en: "Nourhan Ahmed", ar: "نورهان أحمد" },
     role: { en: "Cardio Specialist", ar: "متخصصة كارديو" },
     bio: {
       en: "HIIT and cardio dance expert with a passion for energizing group classes and fat-burning circuits.",
@@ -123,7 +124,7 @@ const femaleTrainers = [
   },
   {
     id: "trainer_04",
-    name: { en: "Nadia Petrova", ar: "ناديا بتروفا" },
+    name: { en: "Mariam Khaled", ar: "مريم خالد" },
     role: { en: "Pilates Master", ar: "خبيرة بيلاتس" },
     bio: {
       en: "Classical Pilates instructor specializing in core strengthening, posture correction, and rehabilitation.",
@@ -149,7 +150,7 @@ const femaleTrainers = [
   },
   {
     id: "trainer_06",
-    name: { en: "Hana Yoshida", ar: "هانا يوشيدا" },
+    name: { en: "Nada Youssef", ar: "ندى يوسف" },
     role: { en: "Nutrition & Wellness", ar: "تغذية وعافية" },
     bio: {
       en: "Registered dietitian and wellness coach integrating nutrition science with movement therapy.",
@@ -167,7 +168,7 @@ const malePrograms = [
     id: "prog_01",
     title: { en: "The Titan Build", ar: "بناء العملاق" },
     description: {
-      en: "Maximum hypertrophy and strength gains through progressive overload. Built for serious lifters who want to push past their limits.",
+      en: "Hypertrophy and strength gains through progressive overload. Built for serious lifters who want to push past their limits.",
       ar: "أقصى قدر من تضخم العضلات ومكاسب القوة من خلال التحميل التدريجي. مصمم للرافعين الجادين الذين يريدون تجاوز حدودهم."
     },
     image: "GymHub/programs/strength/program_strength_01",
@@ -235,7 +236,7 @@ const malePrograms = [
       en: "A hypertrophy-focused training plan designed to increase muscle size using progressive overload and structured splits.",
       ar: "برنامج يركز على التضخيم العضلي باستخدام الحمل التدريجي وتقسيم التمارين بشكل منظم."
     },
-    image: "GymHub/programs/strength/program_strength_04",
+    image: "GymHub/programs/strength/program_strength_05",
     duration: "12 Weeks",
     intensity: "High",
     category: "muscle-gain",
@@ -295,6 +296,32 @@ const femalePrograms = [
     intensity: "Medium",
     category: "fitness",
     sessions: 4
+  },
+  {
+    id: "prog_05",
+    title: { en: "HIIT Blaze", ar: "لهيب الهيت" },
+    description: {
+      en: "Incinerate calories and boost your metabolism with high-intensity intervals designed for maximum efficiency.",
+      ar: "احرق السعرات الحرارية وعزز عملية التمثيل الغذائي لديك من خلال فترات عالية الكثافة مصممة لتحقيق أقصى قدر من الكفاءة."
+    },
+    image: "GymHub/programs/cardio/program_cardio_02",
+    duration: "6 Weeks",
+    intensity: "High",
+    category: "cardio",
+    sessions: 5
+  },
+  {
+    id: "prog_06",
+    title: { en: "Strength Queen", ar: "ملكة القوة" },
+    description: {
+      en: "Build a powerful foundation. Focus on compound lifts to increase overall strength, tone, and functional fitness.",
+      ar: "ابني أساساً قوياً. ركزي على الرفعات المركبة لزيادة القوة الإجمالية، التناسك، واللياقة البدنية الوظيفية."
+    },
+    image: "GymHub/programs/cardio/program_cardio_03",
+    duration: "12 Weeks",
+    intensity: "High",
+    category: "strength",
+    sessions: 4
   }
 ];
 
@@ -303,7 +330,7 @@ const pricingPlans = {
     {
       id: 'm1',
       name: { en: 'Basic Warrior', ar: 'المحارب الأساسي' },
-      price: '$29',
+      price: '1,450 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'Access to Gym Floor', ar: 'دخول إلى صالة الجيم' },
@@ -314,7 +341,7 @@ const pricingPlans = {
     {
       id: 'm2',
       name: { en: 'Elite Champion', ar: 'البطل النخبوي' },
-      price: '$59',
+      price: '2,950 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'All Basic Features', ar: 'جميع الميزات الأساسية' },
@@ -327,7 +354,7 @@ const pricingPlans = {
     {
       id: 'm3',
       name: { en: 'Titan Status', ar: 'مرتبة تيتان' },
-      price: '$99',
+      price: '4,950 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'All Elite Features', ar: 'جميع الميزات النخبوية' },
@@ -341,7 +368,7 @@ const pricingPlans = {
     {
       id: 'f1',
       name: { en: 'Glow Basic', ar: 'توهج أساسي' },
-      price: '$25',
+      price: '1,250 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'Gym & Cardio Area', ar: 'منطقة الجيم والكارديو' },
@@ -352,7 +379,7 @@ const pricingPlans = {
     {
       id: 'f2',
       name: { en: 'Radiant Plus', ar: 'إشراق بلس' },
-      price: '$49',
+      price: '2,450 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'All Basic Features', ar: 'جميع الميزات الأساسية' },
@@ -365,7 +392,7 @@ const pricingPlans = {
     {
       id: 'f3',
       name: { en: 'Empower Elite', ar: 'نخبة التمكين' },
-      price: '$89',
+      price: '4,450 EGP',
       period: { en: 'month', ar: 'شهر' },
       features: [
         { en: 'All Radiant Features', ar: 'جميع ميزات الإشراق' },
@@ -395,7 +422,7 @@ const blogPosts = {
       category: { en: 'Nutrition', ar: 'تغذية' },
       date: '2024-03-15',
       image: 'GymHub/blog/male/bulking-diet',
-      author: { en: 'Marcus Chen', ar: 'ماركوس تشين' },
+      author: { en: 'Mahmoud Adel', ar: 'محمود عادل' },
     },
     {
       id: 'b3',
@@ -404,7 +431,34 @@ const blogPosts = {
       category: { en: 'Recovery', ar: 'تعافي' },
       date: '2024-03-10',
       image: 'GymHub/blog/male/avoid-overtraining',
-      author: { en: 'David Miller', ar: 'ديفيد ميلر' },
+      author: { en: 'Omar Hassan', ar: 'عمر حسن' },
+    },
+    {
+      id: 'b4',
+      title: { en: 'Top 5 Supplements for Muscle Recovery', ar: 'أفضل 5 مكملات غذائية للتعافي العضلي' },
+      excerpt: { en: 'Discover which supplements actually work to reduce soreness and speed up your recovery between heavy sessions.', ar: 'اكتشف المكملات الغذائية التي تعمل فعلياً على تقليل الألم وتسريع شفائك بين الجلسات الشاقة.' },
+      category: { en: 'Nutrition', ar: 'تغذية' },
+      date: '2024-03-25',
+      image: 'GymHub/blog/male/supplements',
+      author: { en: 'Coach Ahmed', ar: 'الكوتش أحمد' },
+    },
+    {
+      id: 'b5',
+      title: { en: 'The Mentality of a Champion: Pushing Past Plateaus', ar: 'عقلية البطل: تجاوز فترات الركود' },
+      excerpt: { en: 'Stuck at the same weight? Learn the psychological tricks elite athletes use to break through physical barriers.', ar: 'عالق في نفس الوزن؟ تعلم الحيل النفسية التي يستخدمها نخبة الرياضيين لاختراق الحواجز الجسدية.' },
+      category: { en: 'Training', ar: 'تدريب' },
+      date: '2024-03-28',
+      image: 'GymHub/blog/male/champion-mentality',
+      author: { en: 'Omar Hassan', ar: 'عمر حسن' },
+    },
+    {
+      id: 'b6',
+      title: { en: 'Core Strength: Beyond the Six-Pack', ar: 'قوة الجذع: ما وراء عضلات البطن الستة' },
+      excerpt: { en: 'A strong core protects your spine and increases your main lifts. Try this 15-minute post-workout core routine.', ar: 'الجذع القوي يحمي عمودك الفقري ويزيد من رفعاتك الأساسية. جرب روتين الجذع هذا لمدة 15 دقيقة بعد التمرين.' },
+      category: { en: 'Training', ar: 'تدريب' },
+      date: '2024-04-02',
+      image: 'GymHub/blog/male/core-strength',
+      author: { en: 'Mahmoud Adel', ar: 'محمود عادل' },
     },
   ],
   female: [
@@ -415,7 +469,7 @@ const blogPosts = {
       category: { en: 'Wellness', ar: 'عافية' },
       date: '2024-03-20',
       image: 'GymHub/blog/female/finding-balance',
-      author: { en: 'Sarah Jenkins', ar: 'سارة جينكينز' },
+      author: { en: 'Sara Mohamed', ar: 'سارة محمد' },
     },
     {
       id: 'f2',
@@ -433,7 +487,34 @@ const blogPosts = {
       category: { en: 'Recovery', ar: 'تعافي' },
       date: '2024-03-05',
       image: 'GymHub/blog/female/self-care',
-      author: { en: 'Elena Rossi', ar: 'إيلينا روسي' },
+      author: { en: 'Nourhan Ahmed', ar: 'نورهان أحمد' },
+    },
+    {
+      id: 'f4',
+      title: { en: 'The Benefits of Pilates for Posture and Core', ar: 'فوائد البيلاتس للقوام وعضلات الجذع' },
+      excerpt: { en: 'Why adding just two Pilates sessions a week can transform your posture, alleviate back pain, and sculpt a strong core.', ar: 'لماذا يمكن لإضافة جلستي بيلاتس فقط أسبوعياً أن تغير قوامك وتخفف آلام الظهر وتنحت جذعاً قوياً.' },
+      category: { en: 'Wellness', ar: 'عافية' },
+      date: '2024-03-25',
+      image: 'GymHub/blog/female/pilates-benefits',
+      author: { en: 'Layla Murad', ar: 'ليلى مراد' },
+    },
+    {
+      id: 'f5',
+      title: { en: 'Power Foods for Natural Energy Boosts', ar: 'أطعمة الطاقة لتعزيز النشاط الطبيعي' },
+      excerpt: { en: 'Ditch the coffee crashes. These 5 nutrient-dense foods will keep your energy levels stable all day long.', ar: 'تخلص من انهيارات القهوة. هذه الأطعمة الخمسة الغنية بالعناصر الغذائية ستحافظ على استقرار مستويات طاقتك طوال اليوم.' },
+      category: { en: 'Nutrition', ar: 'تغذية' },
+      date: '2024-03-28',
+      image: 'GymHub/blog/female/power-foods',
+      author: { en: 'Sara Mohamed', ar: 'سارة محمد' },
+    },
+    {
+      id: 'f6',
+      title: { en: 'How to Build a Sustainable Home Workout Routine', ar: 'كيفية بناء روتين تمرين منزلي مستدام' },
+      excerpt: { en: 'Can’t make it to the gym? Here is how to structure an effective and fun home workout using minimal equipment.', ar: 'لا تستطيع الذهاب إلى الجيم؟ إليك كيفية تنظيم تمرين منزلي فعال وممتع باستخدام الحد الأدنى من المعدات.' },
+      category: { en: 'Training', ar: 'تدريب' },
+      date: '2024-04-02',
+      image: 'GymHub/blog/female/home-workout',
+      author: { en: 'Nourhan Ahmed', ar: 'نورهان أحمد' },
     },
   ],
 };
@@ -482,6 +563,15 @@ const faqs = [
     answer: { 
       en: 'Yes, our elite coaching sessions include basic nutrition guidance. For a full custom meal plan, you can book our Nutrition Specialization add-on.', 
       ar: 'نعم، تشمل جلسات التدريب النخبوي توجيهات غذائية أساسية. للحصول على خطة وجبات مخصصة بالكامل، يمكنك حجز إضافتنا المتخصصة في التغذية.' 
+    }
+  },
+  {
+    id: 6,
+    category: 'membership',
+    question: { en: 'Can I freeze my membership if I travel?', ar: 'هل يمكنني إيقاف عضويتي مؤقتاً إذا سافرت؟' },
+    answer: {
+      en: 'Yes, members on annual or premium plans can freeze their membership up to twice a year for a maximum total of 60 days.',
+      ar: 'نعم، يمكن للأعضاء في الخطط السنوية أو المميزة تجميد عضويتهم حتى مرتين في السنة لمدة أقصاها 60 يوماً.'
     }
   }
 ];

@@ -23,10 +23,8 @@ export default function AboutPage({ params }: { params: Promise<{ lang: string }
 
   const content = {
     male: {
-      tag: { en: 'WHO WE ARE', ar: 'من نحن' },
       title: { en: 'BUILT FOR WARRIORS', ar: 'مصنوع للمحاربين' },
-      desc: { en: 'GymHub was founded on a simple belief: every man deserves access to world-class strength and conditioning. We bring elite coaching, cutting-edge equipment, and a relentless culture under one roof.', ar: 'تأسس جيم هب على إيمان بسيط: كل رجل يستحق الوصول إلى تدريب القوة والتكييف عالمي المستوى. نجمع التدريب النخبوي والمعدات المتطورة وثقافة لا تتوقف تحت سقف واحد.' },
-      hero: "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=1920&auto=format&fit=crop",
+      desc: { en: 'GymHub was founded on a simple belief: every man in Alexandria deserves access to world-class strength and conditioning. We bring elite coaching, cutting-edge equipment, and a relentless culture under one roof.', ar: 'تأسس جيم هب على إيمان بسيط: كل رجل في الإسكندرية يستحق الوصول إلى تدريب القوة والتكييف عالمي المستوى. نجمع التدريب النخبوي والمعدات المتطورة وثقافة لا تتوقف تحت سقف واحد.' },
       mission: {
         title: { en: 'OUR MISSION', ar: 'مهمتنا' },
         p1: { en: 'To create an environment where strength is not just physical — it\'s a mindset. We push boundaries, break limits, and build champions.', ar: 'خلق بيئة حيث القوة ليست مادية فقط — إنها عقلية. ندفع الحدود ونكسر القيود ونبني أبطالاً.' },
@@ -40,8 +38,7 @@ export default function AboutPage({ params }: { params: Promise<{ lang: string }
     },
     female: {
       title: { en: 'DESIGNED FOR BRILLIANCE', ar: 'مصمّم للتألّق' },
-      desc: { en: 'GymHub is a sanctuary for women who believe in the power of movement. We combine expert coaching, beautiful spaces, and holistic programs to help you thrive — body, mind, and soul.', ar: 'جيم هب هو ملاذ للنساء اللواتي يؤمنّ بقوة الحركة. نجمع التدريب الخبير والمساحات الجميلة والبرامج الشاملة لمساعدتك على التألق — جسداً وعقلاً وروحاً.' },
-      hero: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1920&auto=format&fit=crop",
+      desc: { en: 'GymHub is Alexandria\'s premier sanctuary for women who believe in the power of movement. We combine expert coaching, beautiful spaces, and holistic programs to help you thrive — body, mind, and soul.', ar: 'جيم هب هو ملاذ الإسكندرية الأول للنساء اللواتي يؤمنّ بقوة الحركة. نجمع التدريب الخبير والمساحات الجميلة والبرامج الشاملة لمساعدتك على التألق — جسداً وعقلاً وروحاً.' },
       mission: {
         title: { en: 'OUR MISSION', ar: 'مهمتنا' },
         p1: { en: 'To create a welcoming, empowering space where every woman can discover her strength, celebrate her progress, and radiate confidence.', ar: 'خلق مساحة ترحيبية وتمكينية حيث يمكن لكل امرأة اكتشاف قوتها والاحتفال بتقدمها وإشعاع الثقة.' },
@@ -63,7 +60,7 @@ export default function AboutPage({ params }: { params: Promise<{ lang: string }
   });
 
   const timeline = [
-    { year: '2015', title: { en: 'The Beginning', ar: 'البداية' }, desc: { en: 'GymHub opened its first location with 20 members and a dream.', ar: 'افتتح جيم هب أول موقع له مع 20 عضواً وحلم.' } },
+    { year: '2015', title: { en: 'The Beginning', ar: 'البداية' }, desc: { en: 'GymHub opened its first location in Smouha with 20 members and a dream.', ar: 'افتتح جيم هب أول موقع له في سموحة مع 20 عضواً وحلم.' } },
     { year: '2018', title: { en: 'Rapid Growth', ar: 'نمو سريع' }, desc: { en: 'Expanded to 3 locations with over 2,000 active members.', ar: 'توسعنا إلى 3 مواقع مع أكثر من 2000 عضو نشط.' } },
     { year: '2021', title: { en: 'Digital Launch', ar: 'الإطلاق الرقمي' }, desc: { en: 'Launched online coaching and virtual training programs.', ar: 'أطلقنا التدريب عبر الإنترنت وبرامج التدريب الافتراضية.' } },
     { year: '2024', title: { en: 'Elite Status', ar: 'مرتبة النخبة' }, desc: { en: 'Recognized as a top-tier fitness destination with 5K+ members.', ar: 'اعتُرف بنا كوجهة لياقة من الدرجة الأولى مع أكثر من 5000 عضو.' } },
@@ -74,7 +71,8 @@ export default function AboutPage({ params }: { params: Promise<{ lang: string }
       <div className={styles.aboutHero}>
         <div className={styles.heroBg}>
           <img src={heroImageUrl} alt="" className={styles.heroImage} />
-          <div className={styles.heroOverlay} />
+               <div className={styles.heroImageOverlay} />
+
         </div>
         
         <motion.div className={styles.banner} initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }} key={contentMode}>

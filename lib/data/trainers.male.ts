@@ -16,7 +16,7 @@ export const maleTrainers: Trainer[] = [
   },
   {
     id: "trainer_02",
-    name: { en: "Mahmoud Ibrahim", ar: "محمود إبراهيم" },
+    name: { en: "Mahmoud Adel", ar: "محمود عادل" },
     role: { en: "Bodybuilding Pro", ar: "محترف كمال أجسام" },
     bio: {
       en: "IFBB Pro competitor and certified nutrition specialist with a focus on hypertrophy training.",
@@ -55,7 +55,7 @@ export const maleTrainers: Trainer[] = [
   },
   {
     id: "trainer_05",
-    name: { en: "Sami Mansour", ar: "سامي منصور" },
+    name: { en: "Kareem Tarek", ar: "كريم طارق" },
     role: { en: "Athletic Performance", ar: "أداء رياضي" },
     bio: {
       en: "Former D1 athlete now coaching explosive power and sport-specific conditioning.",

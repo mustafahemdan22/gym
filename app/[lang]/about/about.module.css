@@ -1,6 +1,5 @@
 .about {
-  padding-bottom: 8rem;
-  background: var(--bg-main);
+  padding-bottom: 6rem;
 }
 
 .aboutHero {
@@ -17,6 +16,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .heroImage {
@@ -24,10 +24,9 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.5;
-  filter: grayscale(100%) contrast(110%);
 }
 
-.heroOverlay {
+.heroImageOverlay {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at center, transparent 0%, #000 90%),
@@ -100,17 +99,27 @@
   margin-bottom: 1rem;
 }
 
+
 .missionImage {
   position: relative;
-  border-radius: 20px;
+  border-radius: 20%;
   overflow: hidden;
-  height: 400px;
+  transition: all 0.3s ease;
+}
+.missionImage:hover{
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.9);
+  opacity: 1;
+
+
 }
 
-.missionImage img {
+.missionImage img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
 }
 
 .missionImage::after {

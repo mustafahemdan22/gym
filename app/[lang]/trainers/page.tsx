@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useGymData } from '@/hooks/useGymData';
 import { getCloudinaryUrl, getHeroImage } from '@/lib/cloudinary';
 import TrainerModal from '@/components/sections/TrainerModal';
+import type { Trainer } from '@/types/gym';
 import styles from './trainers.module.css';
 
 const TRAINERS_PER_PAGE = 3;
@@ -14,7 +15,7 @@ export default function TrainersPage({ params }: { params: Promise<{ lang: strin
   const { trainers, contentMode, isLoading } = useGymData();
   const [activeFilter, setActiveFilter] = useState('all');
   const [page, setPage] = useState(1);
-  const [selectedTrainer, setSelectedTrainer] = React.useState<any>(null);
+  const [selectedTrainer, setSelectedTrainer] = React.useState<Trainer | null>(null);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const isAr = lang === 'ar';
 
@@ -42,7 +43,7 @@ export default function TrainersPage({ params }: { params: Promise<{ lang: strin
     );
   }
 
-  const openModal = (trainer: any) => {
+  const openModal = (trainer: Trainer) => {
     setSelectedTrainer(trainer);
     setIsModalOpen(true);
   };
@@ -142,7 +143,7 @@ export default function TrainersPage({ params }: { params: Promise<{ lang: strin
                         e.stopPropagation();
                         openModal(trainer);
                       }}>
-                        {isAr ? 'حجز استشارة' : 'BOOK A CONSULTATION'}
+                        {isAr ? 'حجز استشارة' : 'BOOKING'}
                       </button>
                       <button className={styles.btnMessage} onClick={(e) => {
                         e.stopPropagation();

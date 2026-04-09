@@ -47,9 +47,9 @@ export default function BlogDetailPage({ params }: { params: Promise<{ lang: str
         <h2>The Science of Progress</h2>
         <p>Most athletes hit a plateau not because of a lack of effort, but because of a lack of recovery. Proper rest, combined with strategic periodization, allows the muscle fibers to repair and strengthen. Without these critical windows of downtime, even the most rigorous training programs can lead to burnout and injury.</p>
 
-        <blockquote>
-          "Struggle is the precursor to growth. But knowledge is the navigator that ensures that struggle leads to the right destination."
-        </blockquote>
+       <blockquote>
+  &ldquo;Pain builds strength. Discipline shapes your body. But knowledge guides your transformation.&rdquo;
+</blockquote>
 
         <h2>Fueling the Machine</h2>
         <p>Nutrition remains the most overlooked component of elite performance. High-quality protein, complex carbohydrates, and micronutrients are not optional—they are the building blocks of your success. At GymHub, we believe in a holistic approach where every meal is treated as an investment in your future self.</p>
@@ -65,7 +65,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ lang: str
         <p>يصل معظم الرياضيين إلى مرحلة الثبات ليس بسبب نقص الجهد، ولكن بسبب نقص التعافي. الراحة المناسبة، جنباً إلى جنب مع التقسيم الدوري الاستراتيجي، تسمح للألياف العضلية بالإصلاح والتقوية. بدون نوافذ التعافي الحرجة هذه، حتى أكثر برامج التدريب صرامة يمكن أن تؤدي إلى الإرهاق والإصابة.</p>
 
         <blockquote>
-          "النضال هو مقدمة للنمو. لكن المعرفة هي الملاح الذي يضمن أن النضال يؤدي إلى الوجهة الصحيحة."
+          &ldquo;النضال هو مقدمة للنمو. لكن المعرفة هي الملاح الذي يضمن أن النضال يؤدي إلى الوجهة الصحيحة.&rdquo;
         </blockquote>
 
         <h2>تزويد المحرك بالوقود</h2>

@@ -42,14 +42,12 @@ export default function PricingPage({ params }: { params: Promise<{ lang: string
     male: {
       tag: { en: 'INVEST IN YOURSELF', ar: 'استثمر في نفسك' },
       title: { en: 'FORCE PRICING', ar: 'أسعار القوة' },
-      subtitle: { en: 'Choose the level of commitment that matches your ambition. No shortcuts, only progress.', ar: 'اختر مستوى الالتزام الذي يناسب طموحك. لا توجد طرق مختصرة، فقط تقدم.' },
-      hero: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1920&auto=format&fit=crop"
+      subtitle: { en: 'Choose the level of commitment that matches your ambition. No shortcuts, only progress.', ar: 'اختر مستوى الالتزام الذي يناسب طموحك. لا توجد طرق مختصرة، فقط تقدم.' }
     },
     female: {
       tag: { en: 'CHOOSE YOUR GLOW', ar: 'اختاري توهجك' },
       title: { en: 'WELLNESS PLANS', ar: 'خطط العافية' },
-      subtitle: { en: 'Invest in your health, confidence, and radiance. Find the plan that fits your lifestyle.', ar: 'استثمري في صحتك وثقتك وإشراقك. ابحثي عن الخطة التي تناسم أسلوب حياتك.' },
-      hero: "https://images.unsplash.com/photo-1574680096145-d05b474e2158?q=80&w=1920&auto=format&fit=crop"
+      subtitle: { en: 'Invest in your health, confidence, and radiance. Find the plan that fits your lifestyle.', ar: 'استثمري في صحتك وثقتك وإشراقك. ابحثي عن الخطة التي تناسم أسلوب حياتك.' }
     },
   };
 
