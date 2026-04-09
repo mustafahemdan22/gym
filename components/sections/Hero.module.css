@@ -187,6 +187,11 @@
 /* Responsive */
 /* ========================= */
 @media (max-width: 768px) {
+  .heroBg {
+    background-attachment: scroll;
+    transform: translateZ(0);
+  }
+
   .heroTitle {
     font-size: clamp(2rem, 10vw, 3.5rem);
   }
