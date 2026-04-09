@@ -5,7 +5,7 @@
 
 .contactHero {
   position: relative;
-  min-height: 50vh;
+  min-height: 50svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,9 +175,11 @@
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-.submitBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 25px rgba(255, 255, 255, 0.2);
+@media (hover: hover) and (pointer: fine) {
+  .submitBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.2);
+  }
 }
 
 @media (max-width: 900px) {

@@ -4,7 +4,7 @@
 
 .aboutHero {
   position: relative;
-  min-height: 50vh;
+  min-height: 50svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,13 +106,13 @@
   overflow: hidden;
   transition: all 0.3s ease;
 }
-.missionImage:hover{
-  transition: all 0.3s ease;
-  transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.9);
-  opacity: 1;
-
-
+@media (hover: hover) and (pointer: fine) {
+  .missionImage:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.9);
+    opacity: 1;
+  }
 }
 
 .missionImage img{
@@ -158,10 +158,12 @@
   transition: all 0.3s ease;
 }
 
-.valueCard:hover {
-  transform: translateY(-8px);
-  border-color: var(--primary);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+@media (hover: hover) and (pointer: fine) {
+  .valueCard:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .valueIcon {

@@ -5,7 +5,7 @@
 
 .trainersHero {
   position: relative;
-  min-height: 55vh;
+  min-height: 55svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,11 +106,13 @@
   cursor: pointer;
 }
 
-.filterBtn:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  background: rgba(var(--primary-rgb), 0.05);
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .filterBtn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: rgba(var(--primary-rgb), 0.05);
+    transform: translateY(-2px);
+  }
 }
 
 .filterBtnActive {
@@ -146,10 +148,12 @@
 
 }
 
-.card:hover {
-  transform: translateY(-15px);
-  border-color: var(--primary);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-15px);
+    border-color: var(--primary);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  }
 }
 
 .cardImage {
@@ -166,9 +170,11 @@
   filter: grayscale(40%) contrast(105%);
 }
 
-.card:hover .cardImage img {
-  transform: scale(1.08);
-  filter: grayscale(0%) contrast(110%);
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .cardImage img {
+    transform: scale(1.08);
+    filter: grayscale(0%) contrast(110%);
+  }
 }
 
 .cardOverlay {
@@ -275,11 +281,13 @@
 
 }
 
-.btnConsultation:hover {
-  background: #fff;
-  border-color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.4);
+@media (hover: hover) and (pointer: fine) {
+  .btnConsultation:hover {
+    background: #fff;
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.4);
+  }
 }
 
 .btnMessage {
@@ -299,10 +307,12 @@
 
 }
 
-.btnMessage:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .btnMessage:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
 }
 
 @media (min-width: 1100px) {
@@ -336,10 +346,12 @@
   cursor: pointer;
 }
 
-.pageBtn:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  transform: scale(1.1);
+@media (hover: hover) and (pointer: fine) {
+  .pageBtn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: scale(1.1);
+  }
 }
 
 .pageBtnActive {

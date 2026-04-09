@@ -25,7 +25,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
   max-width: 1100px;
   margin: 0 auto;
@@ -39,10 +39,12 @@
   transition: all 0.4s ease;
 }
 
-.trainerCard:hover {
-  transform: translateY(-10px);
-  border-color: var(--primary);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+@media (hover: hover) and (pointer: fine) {
+  .trainerCard:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .imageWrap {
@@ -58,8 +60,10 @@
   transition: transform 0.6s ease;
 }
 
-.trainerCard:hover .image {
-  transform: scale(1.1);
+@media (hover: hover) and (pointer: fine) {
+  .trainerCard:hover .image {
+    transform: scale(1.1);
+  }
 }
 
 .trainerBadge {
@@ -89,8 +93,10 @@
   transition: opacity 0.4s ease;
 }
 
-.trainerCard:hover .overlay {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .trainerCard:hover .overlay {
+    opacity: 1;
+  }
 }
 
 .overlayBio {
@@ -148,10 +154,12 @@
   transition: all 0.3s ease;
 }
 
-.trainerCard:hover .btnQuickView {
-  background: var(--primary);
-  color: #000;
-  border-color: var(--primary);
+@media (hover: hover) and (pointer: fine) {
+  .trainerCard:hover .btnQuickView {
+    background: var(--primary);
+    color: #000;
+    border-color: var(--primary);
+  }
 }
 
 @media (max-width: 900px) {

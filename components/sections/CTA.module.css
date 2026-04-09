@@ -100,17 +100,19 @@
   border: 1px solid var(--primary);
 }
 
-.btn:hover {
-  background: transparent;
-  color: var(--primary);
-  transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(var(--primary-rgb), 0.4);
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: transparent;
+    color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(var(--primary-rgb), 0.4);
+  }
 }
 
 @media (max-width: 768px) {
   .cta {
     padding: 6rem 1.5rem;
-    min-height: 60vh;
+    min-height: 60svh;
   }
 
   .glowOrb {

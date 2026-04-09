@@ -99,6 +99,8 @@
 html,
 body {
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
   background: var(--bg-main);
   color: var(--text-main);
   scroll-behavior: smooth;
@@ -147,8 +149,10 @@ body {
   transition: var(--transition);
 }
 
-.btnPrimary:hover {
-  opacity: 0.9;
+@media (hover: hover) and (pointer: fine) {
+  .btnPrimary:hover {
+    opacity: 0.9;
+  }
 }
 
 

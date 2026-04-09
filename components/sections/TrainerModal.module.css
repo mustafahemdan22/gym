@@ -21,6 +21,8 @@
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .imageWrap {
@@ -64,9 +66,11 @@
   transition: all 0.3s ease;
 }
 
-.closeBtn:hover {
-  background: var(--primary);
-  color: #000;
+@media (hover: hover) and (pointer: fine) {
+  .closeBtn:hover {
+    background: var(--primary);
+    color: #000;
+  }
 }
 
 .tag {
@@ -152,13 +156,15 @@
   font-size: 0.9rem;
 }
 
-.btnPrimary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(var(--primary-rgb), 0.3);
-}
+@media (hover: hover) and (pointer: fine) {
+  .btnPrimary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(var(--primary-rgb), 0.3);
+  }
 
-.btnSecondary:hover {
-  border-color: var(--text-main);
+  .btnSecondary:hover {
+    border-color: var(--text-main);
+  }
 }
 
 [dir="rtl"] .modal {

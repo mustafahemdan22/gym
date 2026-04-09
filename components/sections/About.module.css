@@ -28,8 +28,10 @@
   transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.imageContainer:hover .image {
-  transform: scale(1.05);
+@media (hover: hover) and (pointer: fine) {
+  .imageContainer:hover .image {
+    transform: scale(1.05);
+  }
 }
 
 .imageOverlay {
@@ -104,15 +106,17 @@
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.statCard:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: var(--primary);
-  background: rgba(var(--primary-rgb), 0.05);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-}
+@media (hover: hover) and (pointer: fine) {
+  .statCard:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--primary);
+    background: rgba(var(--primary-rgb), 0.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  }
 
-[data-theme='light'] .statCard:hover {
-  box-shadow: 0 8px 30px rgba(255, 0, 135, 0.15);
+  [data-theme='light'] .statCard:hover {
+    box-shadow: 0 8px 30px rgba(255, 0, 135, 0.15);
+  }
 }
 
 .statIcon {

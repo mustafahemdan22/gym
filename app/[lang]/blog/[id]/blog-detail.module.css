@@ -1,5 +1,5 @@
 .blogDetail {
-  min-height: 100vh;
+  min-height: 100svh;
   padding-top: 8rem;
   background: var(--bg-main);
   color: var(--text-main);
@@ -130,8 +130,10 @@
   transition: gap 0.3s ease;
 }
 
-.backBtn:hover {
-  gap: 0.8rem;
+@media (hover: hover) and (pointer: fine) {
+  .backBtn:hover {
+    gap: 0.8rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -153,7 +155,7 @@
 }
 
 .loadingWrap {
-  min-height: 80vh;
+  min-height: 80svh;
   display: flex;
   align-items: center;
   justify-content: center;

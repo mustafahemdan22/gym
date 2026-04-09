@@ -1,5 +1,5 @@
 .schedule {
-  min-height: 100vh;
+  min-height: 100svh;
   padding: 10rem 2rem 6rem;
   background: var(--bg-main);
 }
@@ -145,9 +145,11 @@
   letter-spacing: 2px;
 }
 
-.btnSubmit:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.4);
+@media (hover: hover) and (pointer: fine) {
+  .btnSubmit:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.4);
+  }
 }
 
 .summary {

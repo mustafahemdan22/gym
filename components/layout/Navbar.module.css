@@ -50,8 +50,10 @@
   transition: transform 0.2s;
 }
 
-.socialLink:hover {
-  transform: scale(1.2);
+@media (hover: hover) and (pointer: fine) {
+  .socialLink:hover {
+    transform: scale(1.2);
+  }
 }
 
 .nav {
@@ -108,14 +110,19 @@
   border-radius: 2px;
 }
 
-.navLink:hover::after,
-.active::after {
-  width: 100%;
+@media (hover: hover) and (pointer: fine) {
+  .navLink:hover::after {
+    width: 100%;
+  }
+
+  .navLink:hover {
+    color: #fff;
+    transform: translateY(-2px);
+  }
 }
 
-.navLink:hover {
-  color: #fff;
-  transform: translateY(-2px);
+.active::after {
+  width: 100%;
 }
 
 .active {
@@ -152,10 +159,12 @@
   letter-spacing: 1px;
 }
 
-.bookBtn:hover {
-  background: transparent;
-  color: var(--primary);
-  box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.3);
+@media (hover: hover) and (pointer: fine) {
+  .bookBtn:hover {
+    background: transparent;
+    color: var(--primary);
+    box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.3);
+  }
 }
 
 .langText {
@@ -250,8 +259,10 @@
   transition: transform 0.2s;
 }
 
-.floatingSocialLink:hover {
-  transform: scale(1.2);
+@media (hover: hover) and (pointer: fine) {
+  .floatingSocialLink:hover {
+    transform: scale(1.2);
+  }
 }
 
 .hamburger {

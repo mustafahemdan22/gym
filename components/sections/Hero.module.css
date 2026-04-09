@@ -3,7 +3,7 @@
 /* ========================= */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,8 @@
   z-index: 10;
   text-align: center;
   padding: 0 2rem;
-  width:75%;
+  width: 100%;
+  max-width: 1200px;
   text-align: center;
 }
 
@@ -110,9 +111,11 @@
 }
 
 
-.primaryBtn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 30px rgba(var(--bg-gradient), 0.3);
+@media (hover: hover) and (pointer: fine) {
+  .primaryBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(var(--bg-gradient), 0.3);
+  }
 }
 
 

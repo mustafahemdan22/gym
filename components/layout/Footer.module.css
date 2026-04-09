@@ -64,12 +64,14 @@
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.socials a:hover {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: #000;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(var(--primary-rgb), 0.3);
+@media (hover: hover) and (pointer: fine) {
+  .socials a:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(var(--primary-rgb), 0.3);
+  }
 }
 
 .colTitle {
@@ -98,13 +100,15 @@
   display: inline-block;
 }
 
-.linkList a:hover {
-  color: #fff;
-  transform: translateX(8px);
-}
+@media (hover: hover) and (pointer: fine) {
+  .linkList a:hover {
+    color: #fff;
+    transform: translateX(8px);
+  }
 
-[dir='rtl'] .linkList a:hover {
-  transform: translateX(-8px);
+  [dir='rtl'] .linkList a:hover {
+    transform: translateX(-8px);
+  }
 }
 
 .contactList {
