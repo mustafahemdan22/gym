@@ -48,6 +48,7 @@
   color: white;
   font-size: 1rem;
   transition: transform 0.2s;
+  
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -257,7 +258,7 @@
   color: white;
   font-size: 1.3rem;
   transition: transform 0.2s;
-  
+
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -283,10 +284,12 @@
   background-color: currentColor;
   left: 0;
   transition: all 0.3s ease;
+  
 }
 
 .hamburger::before {
   top: -8px;
+  text-align: center;
 }
 
 .hamburger::after {
@@ -352,20 +355,39 @@
     z-index: 9999;
     border-bottom: none;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(5, 5, 5, 0.95);
+    background: var(--bg-gradient);
     backdrop-filter: blur(15px);
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
   }
-  
-.floatingSocials {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  bottom: 3.4rem;
-  z-index: 1000;
-  left: 0.6rem;
-}
+
+  .socialLink {
+    display: none;
+  }
+
+  .topBar {
+    background: var(--bg-gradient);
+    position: fixed;
+    bottom: auto;
+    top: -590px;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0;
+  }
+  .topBarContent {
+    padding-top: 0.4rem;
+  }
+
+  .floatingSocials {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    bottom: 3.4rem;
+    z-index: 1000;
+    left: 0.6rem;
+  }
 
   .nav {
     padding: 0.8rem 0;
@@ -373,21 +395,33 @@
 
   .navContent {
     align-items: center;
+    
   }
+.mobileMenu {
+  position: absolute;
+  width: 30%;
+  bottom: 100%;
+  background: var(--bg-main);
+  text-align: center;
+}
 
-  .topBar {
-    display: none !important;
-  }
+/* English: left-aligned */
+[dir="ltr"] .mobileMenu {
+   right: 0;
+  left: auto;
+  border-radius: 30px 0 0 0;
 
-  .mobileMenu {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
-    background: var(--bg-main);
-  }
+  
+
+}
+
+/* Arabic: right-aligned */
+[dir="rtl"] .mobileMenu {
+  left: 0;
+  right: auto;
+
+  border-radius: 0 30px 0 0; /* الزوايا الأصلية */
+}
 }
 
 @media (max-width: 480px) {

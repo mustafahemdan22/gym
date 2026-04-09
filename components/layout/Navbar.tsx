@@ -20,15 +20,26 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // scroll effect
+  // resize and scroll effects
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 150);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -62,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
     <header className={styles.navbar}>
       {/* Top Bar */}
       <AnimatePresence>
-        {!isScrolled && (
+        {(!isScrolled || isMobile) && (
           <motion.div
             className={styles.topBar}
             initial={{ height: 0, opacity: 0 }}
@@ -104,13 +115,13 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
                 </li>
               ))}
             </ul>
-            
+
 
             <div className={styles.actions}>
-             
-              <button 
-                onClick={switchLanguage} 
-                className={styles.iconButton} 
+
+              <button
+                onClick={switchLanguage}
+                className={styles.iconButton}
                 aria-label="Switch language"
                 title={isAr ? 'تغيير اللغة' : 'Change Language'}
               >
@@ -120,7 +131,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
               <Link href={`/${lang}/schedule`} className={styles.bookBtn}>
                 {isAr ? 'احجز الآن' : 'BOOK NOW'}
               </Link>
-               <button
+              <button
                 onClick={toggleTheme}
                 className={`${styles.iconButton} ${styles.themeToggleBtn}`}
                 aria-label="Toggle content mode"
