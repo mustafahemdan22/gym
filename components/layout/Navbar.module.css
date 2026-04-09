@@ -22,7 +22,7 @@
   font-size: 0.9rem;
   padding: 0.3rem 0;
   backdrop-filter: blur(10px);
- }
+}
 
 .topBarContent {
   display: flex;
@@ -170,7 +170,7 @@
 .langText {
   font-weight: bold;
   text-transform: uppercase;
-  
+
 }
 
 .menuButton {
@@ -205,7 +205,6 @@
   margin-top: 1rem;
 }
 
-/* Scroll Buttons Positions */
 .scrollToLeft {
   left: 2rem;
   bottom: 3rem;
@@ -223,7 +222,7 @@
 
 .scrollToRight {
   right: 2rem;
-  bottom: 2rem;
+  bottom: 3rem;
   position: fixed;
   z-index: 1000;
   background-color: var(--color-primary);
@@ -241,24 +240,24 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  top: 4rem;
+  bottom: 3.4rem;
   z-index: 1000;
-  left: 0.3rem;
-  
+  left: 0.6rem;
 }
 
 .socialsRight {
-  right: 1rem;
+  right: 2rem;
 }
 
 .socialsLeft {
-  left: 1rem;
+  left: 2rem;
 }
 
 .floatingSocialLink {
   color: white;
   font-size: 1.3rem;
   transition: transform 0.2s;
+  
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -286,8 +285,13 @@
   transition: all 0.3s ease;
 }
 
-.hamburger::before { top: -8px; }
-.hamburger::after { top: 8px; }
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
@@ -304,7 +308,7 @@
     height: 30px;
     margin-left: 10px;
   }
-  
+
   [dir="rtl"] .menuButton {
     margin-left: 0;
     margin-right: 10px;
@@ -338,13 +342,51 @@
   }
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-bottom: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav {
+    padding: 0.8rem 0;
+  }
+
+  .navContent {
+    align-items: center;
+  }
+
+  .topBar {
+    display: none !important;
+  }
+
+  .mobileMenu {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+    background: var(--bg-main);
+  }
+}
+
 @media (max-width: 480px) {
   .topBarContent {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
-    
   }
+
   .scrollToLeft {
     display: none;
   }
