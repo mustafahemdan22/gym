@@ -30,6 +30,9 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  useEffect(() => {
+  setIsMenuOpen(false);
+}, [pathname]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -59,7 +62,27 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
   };
 
   return (
+    <>
+       <motion.div
+            className={styles.topBarMobile}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className={styles.topBarContentMobile}>
+              <div className={styles.discountBannerMobile}>
+                {isAr ? toggleText.discount.ar : toggleText.discount.en}
+              </div>
+              {/* <div className={styles.topSocials}>
+                <a href="#" className={styles.socialLink} aria-label="Facebook"><FaFacebookF /></a>
+                <a href="#" className={styles.socialLink} aria-label="Instagram"><FaInstagram /></a>
+                <a href="#" className={styles.socialLink} aria-label="Twitter"><FaTwitter /></a>
+              </div> */}
+            </div>
+          </motion.div>
     <header className={styles.navbar}>
+      
       {/* Top Bar */}
       <AnimatePresence>
         {!isScrolled && (
@@ -83,6 +106,12 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
           </motion.div>
         )}
       </AnimatePresence>
+       {/* Top Bar */}
+      
+
+       
+        
+
 
       {/* Main Nav */}
       <nav className={styles.nav}>
@@ -143,12 +172,13 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className={styles.mobileMenu}
-          >
+         <motion.div
+  initial={{ y: '300%' }}
+  animate={{ y: 0 }}
+  exit={{ y: '300%' }}
+  transition={{ duration: 0.4 }}
+  className={styles.mobileMenu}
+>
             <ul className={styles.mobileNavLinks}>
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -170,7 +200,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
       <AnimatePresence>
         {isScrolled && (
           <>
-            <motion.button
+            {/* <motion.button
               className={`${styles.scrollToTop} ${isAr ? styles.scrollToRight : styles.scrollToLeft}`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -179,7 +209,20 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
               onClick={scrollToTop}
             >
               ↑
-            </motion.button>
+            </motion.button> */}
+
+            <motion.button
+  className={`${styles.scrollToTop} ${isAr ? styles.scrollToRight : styles.scrollToLeft}`}
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: 50 }}
+  whileHover={{ scale: 1.1 }}
+  onClick={scrollToTop}
+>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 19V5M5 12l7-7 7 7" />
+  </svg>
+</motion.button>
 
             <motion.div
               className={`${styles.floatingSocials} ${isAr ? styles.socialsLeft : styles.socialsRight}`}
@@ -195,7 +238,9 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
         )}
       </AnimatePresence>
     </header>
+    </>
   );
 };
+
 
 export default Navbar;

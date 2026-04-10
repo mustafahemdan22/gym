@@ -210,6 +210,11 @@ button {
   width: 8px;
 }
 
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* ::-webkit-scrollbar-track {
   background: var(--bg-main);
 }
