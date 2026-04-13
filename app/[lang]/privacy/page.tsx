@@ -9,9 +9,20 @@ export default function PrivacyPage({ params }: { params: Promise<{ lang: string
 
   return (
     <div className={styles.legal}>
-      <div className={styles.container}>
+      <div className={styles.legalHero}>
+        <div className={styles.heroBg}>
+          <img 
+            src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1920&auto=format&fit=crop" 
+            alt="" 
+            className={styles.heroImage} 
+          />
+          <div className={styles.heroOverlay} />
+        </div>
         <h1>{isAr ? 'سياسة الخصوصية' : 'Privacy Policy'}</h1>
-        <p className={styles.lastUpdated}>{isAr ? 'آخر تحديث: 7 أبريل 2024' : 'Last Updated: April 7, 2024'}</p>
+      </div>
+
+      <div className={styles.container}>
+        <p className={styles.lastUpdated}>{isAr ? 'آخر تحديث: 13 أبريل 2024' : 'Last Updated: April 13, 2024'}</p>
         
         <div className={styles.content}>
           <section>

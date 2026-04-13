@@ -1,6 +1,6 @@
 .legal {
-  padding-bottom: 8rem;
-  background: var(--bg-main);
+  padding-bottom: 3rem;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .legalHero {
@@ -11,6 +11,16 @@
   justify-content: center;
   padding: 8rem 2rem 10rem;
   overflow: hidden;
+}
+.legalHero h1{
+  font-size: 4rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: var(--font-oswald);
+  font-weight: 800;
+  
+  
 }
 
 .heroBg {
@@ -37,10 +47,11 @@
 
 .container {
   max-width: 900px;
-  margin: -6rem auto 0;
+  margin: 4rem auto 0;
   position: relative;
   z-index: 2;
   padding: 0 2rem;
+  
 }
 
 .container h1 {
