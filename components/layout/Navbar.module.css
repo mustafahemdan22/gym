@@ -204,9 +204,19 @@
   gap: 1rem;
   margin-top: 1rem;
 }
+.floatingSocials {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  bottom: 2.6rem;
+  z-index: 1000;
+  left: 0.8rem; 
+  width: 10rem;
+}
 
 .scrollToLeft {
-  left: 2rem;
+  right: 0.8rem;
   bottom: 3rem;
   position: fixed;
   z-index: 1000;
@@ -235,23 +245,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.floatingSocials {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  bottom: 2.6rem;
-  z-index: 1000;
-  left: 0.3rem; 
-}
 
-.socialsRight {
-  right: 2rem;
-}
 
-.socialsLeft {
-  left: 2rem;
-}
+
 
 .floatingSocialLink {
   
