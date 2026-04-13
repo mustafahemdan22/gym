@@ -93,7 +93,13 @@ const Footer: React.FC<FooterProps> = ({ lang }) => {
         </div>
 
         <div className={styles.bottom}>
-          <p>© {new Date().getFullYear()} GymHub. {isAr ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}</p>
+          <div className={styles.bottomInfo}>
+            <p>© {new Date().getFullYear()} GymHub. {isAr ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}</p>
+            {/* <div className={styles.legalLinks}>
+              <Link href={`/${lang}/terms`}>{isAr ? 'الشروط والأحكام' : 'Terms of Service'}</Link>
+              <Link href={`/${lang}/privacy`}>{isAr ? 'سياسة الخصوصية' : 'Privacy Policy'}</Link>
+            </div> */}
+          </div>
           <p className={styles.credit}>
             {isAr ? 'التصميم والبرمجة بواسطة مصطفى حمدان' : 'Design & Development by Mustafa Hemdan'}
           </p>
