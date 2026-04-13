@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang }) => {
 
   const navLinks = [
     { name: isAr ? 'الرئيسية' : 'Home', href: `/${lang}` },
-    { name: isAr ? 'عنا' : 'About', href: `/${lang}/about` },
+    { name: isAr ? 'نحن' : 'About', href: `/${lang}/about` },
     { name: isAr ? 'المدربين' : 'Trainers', href: `/${lang}/trainers` },
     { name: isAr ? 'الأسعار' : 'Pricing', href: `/${lang}/pricing` },
     { name: isAr ? 'المدونة' : 'Blog', href: `/${lang}/blog` },

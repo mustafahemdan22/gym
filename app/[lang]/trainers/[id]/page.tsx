@@ -48,9 +48,9 @@ export default function TrainerDetailPage({ params }: { params: Promise<{ lang: 
   return (
     <div className={styles.trainerDetail}>
       <div className={styles.container}>
-        <Link href={`/${lang}/trainers`} className={styles.backBtn}>
+        <button onClick={() => window.history.back()} className={styles.backBtn}>
           <IoArrowBack /> {isAr ? 'العودة للمدربين' : 'Back to Trainers'}
-        </Link>
+        </button>
 
         {/* Hero Section */}
         <section className={styles.hero}>
@@ -91,7 +91,7 @@ export default function TrainerDetailPage({ params }: { params: Promise<{ lang: 
 
             <div className={styles.btnGroup}>
               <Link href={`/${lang}/schedule?trainerId=${trainer.id}`} className={styles.btnPrimary} style={{ textDecoration: 'none' }}>
-                {isAr ? 'احجز استشارة' : 'BOOK A CONSULTATION'}
+                {isAr ? 'احجز استشارة' : 'BOOKING'}
               </Link>
               <Link href={`/${lang}/contact`} className={styles.btnSecondary} style={{ textDecoration: 'none' }}>
                 {isAr ? 'تواصل معنا' : 'MESSAGE COACH'}

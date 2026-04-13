@@ -14,7 +14,8 @@ interface HeroProps {
 
 const heroContent = {
   male: {
-    title: { en: 'UNLEASH YOUR POWER', ar: 'أَطلِق قوّتك' },
+    title: { en: 'UNLEASH YOUR POWER',     ar: 'اِفرض سيطرتك الكاملة' 
+},
     subtitle: {
       en: 'Train harder. Get stronger. Break every limit.',
       ar: 'تدرّب بقوة أكبر وكن أقوى.',
@@ -23,7 +24,8 @@ const heroContent = {
     cta2: { en: 'VIEW PROGRAMS', ar: 'عرض البرامج' },
   },
   female: {
-    title: { en: 'GLOWING WITH FITNESS', ar: 'تألّقي بلياقة' },
+    title: { en: 'GLOWING WITH FITNESS',   ar: 'تألّقي بقوة وأناقة' 
+},
     subtitle: {
       en: 'Move with confidence. Discover your power.',
       ar: 'تحرّكي بثقة واكتشفي قوتك.',

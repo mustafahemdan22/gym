@@ -130,7 +130,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ lang: str
             <Link href={`/${lang}/blog`} className={styles.backBtn}>
               <IoArrowBack /> {isAr ? 'العودة للمدونة' : 'Back to Blog'}
             </Link>
-            <IoShareSocialOutline style={{ fontSize: '1.5rem', cursor: 'pointer', color: 'var(--text-muted)' }} />
+            <IoShareSocialOutline className={styles.shareBtn} />
           </div>
         </footer>
       </div>

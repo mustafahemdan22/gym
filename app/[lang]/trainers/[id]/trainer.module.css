@@ -179,6 +179,17 @@
     border-radius: 20px;
 
 }
+.backBtn{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
 .btnPrimary, .btnSecondary {
   display: flex;
