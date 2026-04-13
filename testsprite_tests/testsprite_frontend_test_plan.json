@@ -1,0 +1,218 @@
+[
+  {
+    "id": "TC001",
+    "title": "Unsupported locale redirects to English home with working site shell navigation",
+    "description": "Verifies that visiting an unsupported locale redirects to English home and the user can navigate to English programs and trainers using the site shell.",
+    "category": "Localization System",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /fr"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the programs list"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the trainers directory"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the trainers directory is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page is in English and uses left-to-right direction"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Arabic locale renders RTL layout and preserves Arabic localization across navigation",
+    "description": "Verifies that the Arabic home renders with RTL direction and navigating to the trainers page keeps Arabic localization.",
+    "category": "Localization System",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /ar"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the trainers directory"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the trainers directory is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page is in Arabic and uses right-to-left direction"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Unsupported locale trainers route redirects to English trainers directory",
+    "description": "Verifies that visiting trainers under an unsupported locale redirects to the English trainers page and renders the directory.",
+    "category": "Training Programs & Trainers",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /xx/trainers"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page to finish loading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the trainers directory is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page is in English and uses left-to-right direction"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "English locale renders LTR layout and consistent site shell",
+    "description": "Verifies that the English home renders with the site shell and left-to-right direction.",
+    "category": "Core Site Shell",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page to finish loading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the navigation bar and footer are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page uses left-to-right direction"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Arabic locale renders site shell with RTL direction",
+    "description": "Verifies that the Arabic home renders the navigation bar and footer with RTL direction.",
+    "category": "Core Site Shell",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /ar"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page to finish loading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the navigation bar and footer are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page uses right-to-left direction"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "English programs listing renders from data source and can return to home without losing locale",
+    "description": "Verifies that the English programs page shows a programs list and the user can navigate back to English home via the site shell.",
+    "category": "Training Programs & Trainers",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/programs"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to go to the home page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user lands on the English home page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page is in English and uses left-to-right direction"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "English trainers directory renders from data source",
+    "description": "Verifies that the English trainers page displays a populated trainers directory.",
+    "category": "Training Programs & Trainers",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /en/trainers"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page to finish loading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the trainers directory is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page is in English and uses left-to-right direction"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Arabic trainers directory renders localized to Arabic",
+    "description": "Verifies that the Arabic trainers page displays the trainers directory with Arabic localization and RTL direction.",
+    "category": "Training Programs & Trainers",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /ar/trainers"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the page to finish loading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the trainers directory is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page is in Arabic and uses right-to-left direction"
+      }
+    ],
+    "priority": "High"
+  }
+]

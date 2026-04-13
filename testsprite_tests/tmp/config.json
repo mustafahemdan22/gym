@@ -1,0 +1,19 @@
+{
+  "status": "commited",
+  "type": "backend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000/3002",
+  "backendAuthType": "public",
+  "executionArgs": {
+    "projectName": "gym",
+    "projectPath": "d:\\next-react\\gym",
+    "testIds": [],
+    "additionalInstruction": "Verify the high-end monochromatic aesthetic and RTL/LTR localization.",
+    "serverMode": "development",
+    "envs": {
+      "API_KEY": "sk-user-hke6qGggwmFNcbcrTn6Nk-ypq_iV0M2nZ91StY17OH7Qp2vz3QU8ayAKktLpy2MxdqoTLZ99IQbdPjHggRG6pzKAj97uOJPqGHbHjWXcMOrYFMWSAxjp679tfE52z_C4GUY"
+    }
+  },
+  "serverPort": 11744,
+  "proxy": "http://07e9c7e5-5a39-4769-a559-4c6aadf57f2f:Wht9Zu1aeaHWMKlFtGxeOC1athVXkq0o@tun.testsprite.com:8080"
+}

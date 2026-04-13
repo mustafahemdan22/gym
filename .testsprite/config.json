@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "backendAuthType": "public",
+  "executionArgs": {
+    "projectName": "gym",
+    "projectPath": "d:\\next-react\\gym",
+    "testIds": [],
+    "additionalInstruction": "Run basic accessibility and visibility checks.",
+    "serverMode": "development",
+    "envs": {
+      "API_KEY": "sk-user-hke6qGggwmFNcbcrTn6Nk-ypq_iV0M2nZ91StY17OH7Qp2vz3QU8ayAKktLpy2MxdqoTLZ99IQbdPjHggRG6pzKAj97uOJPqGHbHjWXcMOrYFMWSAxjp679tfE52z_C4GUY"
+    }
+  },
+  "serverPort": 8609
+}

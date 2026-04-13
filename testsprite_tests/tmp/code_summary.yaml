@@ -1,0 +1,42 @@
+version: "2"
+type: backend
+tech_stack:
+  - language: TypeScript
+  - framework: Next.js
+  - database: Convex
+  - styling: CSS Modules
+features:
+  - name: Core Site Shell
+    description: Main layout and navigation components with localization support.
+    files:
+      - app/[lang]/layout.tsx
+      - components/layout/Navbar.tsx
+      - components/layout/Footer.tsx
+    endpoints:
+      - method: GET
+        path: /[lang]
+        description: Main landing for specific locale.
+        auth_required: false
+  - name: Training Programs & Trainers
+    description: Data-driven menus for gym offerings and coaching staff.
+    files:
+      - app/[lang]/programs/page.tsx
+      - app/[lang]/trainers/page.tsx
+      - lib/data/programs.male.ts
+      - lib/data/trainers.male.ts
+    endpoints:
+      - method: GET
+        path: /[lang]/programs
+        description: View programs list.
+        auth_required: false
+      - method: GET
+        path: /[lang]/trainers
+        description: View trainers directory.
+        auth_required: false
+  - name: Localization System
+    description: Arabic and English multi-language support.
+    files:
+      - app/[lang]/layout.tsx
+      - middleware.ts
+    endpoints: []
+known_limitations: []
