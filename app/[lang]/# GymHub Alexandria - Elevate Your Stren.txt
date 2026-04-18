@@ -1,0 +1,62 @@
+# GymHub Alexandria - Elevate Your Strength
+
+[GYMHUB](http://localhost:3000/en)
+- [Home](http://localhost:3000/en)
+- [About](http://localhost:3000/en/about)
+- [Trainers](http://localhost:3000/en/trainers)
+- [Pricing](http://localhost:3000/en/pricing)
+- [Blog](http://localhost:3000/en/blog)
+- [Contact](http://localhost:3000/en/contact)
+- [Programs](http://localhost:3000/en/programs)
+[Home](http://localhost:3000/en)
+[About](http://localhost:3000/en/about)
+[Trainers](http://localhost:3000/en/trainers)
+[Pricing](http://localhost:3000/en/pricing)
+[Blog](http://localhost:3000/en/blog)
+[Contact](http://localhost:3000/en/contact)
+[Programs](http://localhost:3000/en/programs)
+[BOOK NOW](http://localhost:3000/en/schedule)
+
+# Terms of Service
+Last Updated: April 13, 2024
+
+## 1. Acceptance of Terms
+By accessing our services, you agree to be bound by these Terms of Service.
+
+## 2. User Conduct
+You agree not to use the service for any illegal purpose or to violate any terms of use.
+
+## 3. Limitation of Liability
+We are not liable for any damages resulting from your use of or inability to use the service.
+
+### GYMHUB
+Your premier destination for strength, fitness, and transformation. Join us and start your journey.
+
+#### Explore
+- [Home](http://localhost:3000/en)
+- [About](http://localhost:3000/en/about)
+- [Trainers](http://localhost:3000/en/trainers)
+- [Programs](http://localhost:3000/en/programs)
+[Home](http://localhost:3000/en)
+[About](http://localhost:3000/en/about)
+[Trainers](http://localhost:3000/en/trainers)
+[Programs](http://localhost:3000/en/programs)
+
+#### Support
+- [Pricing](http://localhost:3000/en/pricing)
+- [Blog](http://localhost:3000/en/blog)
+- [Contact](http://localhost:3000/en/contact)
+- [FAQ](http://localhost:3000/en/faq)
+[Pricing](http://localhost:3000/en/pricing)
+[Blog](http://localhost:3000/en/blog)
+[Contact](http://localhost:3000/en/contact)
+[FAQ](http://localhost:3000/en/faq)
+
+#### Contact
+- info@gymhub.com
+- +20 12 3456 7890
+- Smouha, Alexandria, Egypt
+© 2026 GymHub. All rights reserved.
+[Terms of Service](http://localhost:3000/en/terms)
+[Privacy Policy](http://localhost:3000/en/privacy)
+Design & Development by Mustafa Hemdan
